@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmegaMUD", "OmegaMUD\OmegaMUD.csproj", "{3E5A0912-7AE5-4A3E-9F37-4E36550DCDB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FCED1B15-FEF8-4F40-ACDF-C6BA75429F40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E5A0912-7AE5-4A3E-9F37-4E36550DCDB8}.Debug|x86.ActiveCfg = Debug|x86
+		{3E5A0912-7AE5-4A3E-9F37-4E36550DCDB8}.Debug|x86.Build.0 = Debug|x86
+		{3E5A0912-7AE5-4A3E-9F37-4E36550DCDB8}.Release|x86.ActiveCfg = Release|x86
+		{3E5A0912-7AE5-4A3E-9F37-4E36550DCDB8}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

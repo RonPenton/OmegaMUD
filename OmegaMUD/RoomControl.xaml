@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="OmegaMUD.RoomControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="22" d:DesignWidth="22" Background="Transparent" Width="22" Height="22" MouseDoubleClick="UserControl_MouseDoubleClick" >
+    <Grid>
+        <Line Name="North" X1="11" Y1="11" X2="11" Y2="0" Stroke="LightGray" StrokeThickness="1" />
+        <Line Name="South" X1="11" Y1="11" X2="11" Y2="22" Stroke="LightGray" StrokeThickness="1" />
+        <Line Name="East" X1="11" Y1="11" X2="22" Y2="11" Stroke="LightGray" StrokeThickness="1" />
+        <Line Name="West" X1="11" Y1="11" X2="0" Y2="11" Stroke="LightGray" StrokeThickness="1" />
+        <Line Name="NorthWest" X1="11" Y1="11" X2="0" Y2="0" Stroke="LightGray" StrokeThickness="1" />
+        <Line Name="NorthEast" X1="11" Y1="11" X2="22" Y2="0" Stroke="LightGray" StrokeThickness="1" />
+        <Line Name="SouthWest" X1="11" Y1="11" X2="0" Y2="22" Stroke="LightGray" StrokeThickness="1" />
+        <Line Name="SouthEast" X1="11" Y1="11" X2="22" Y2="22" Stroke="LightGray" StrokeThickness="1" />
+
+        <Rectangle Name="Square" Width="14" Height="14" Stroke="#004400" StrokeThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="Gray" RenderTransformOrigin="0.5,0.5" >
+            <Rectangle.RenderTransform>
+                <RotateTransform Angle="0" />
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Ellipse Name="Circle" Width="14" Height="14" Stroke="#004400" StrokeThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="Gray" Visibility="Visible" RenderTransformOrigin="0.5,0.5"  />
+        <Path Name="Up" Stroke="Transparent" Data="M 7,10.5 L 11,6 L 15,10.5 L 7,10.5" Fill="Purple" />
+        <Path Name="Down" Stroke="Transparent" Data="M 7,11.5 L 11,16 L 15,11.5 L 7,11.5" Fill="Purple" />
+    </Grid>
+</UserControl>

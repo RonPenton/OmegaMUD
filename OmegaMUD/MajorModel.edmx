@@ -1,0 +1,2065 @@
+﻿<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+<edmx:Runtime>
+<edmx:StorageModels>
+<Schema Namespace="MajorModelModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MajorModelModelStoreContainer">
+    <EntitySet Name="Classes" EntityType="MajorModelModel.Store.Classes" store:Type="Tables" />
+    <EntitySet Name="Items" EntityType="MajorModelModel.Store.Items" store:Type="Tables" />
+    <EntitySet Name="Messages" EntityType="MajorModelModel.Store.Messages" store:Type="Tables" />
+    <EntitySet Name="Monsters" EntityType="MajorModelModel.Store.Monsters" store:Type="Tables" />
+    <EntitySet Name="Races" EntityType="MajorModelModel.Store.Races" store:Type="Tables" />
+    <EntitySet Name="Rooms" EntityType="MajorModelModel.Store.Rooms" store:Type="Tables" />
+    <EntitySet Name="Settings" EntityType="MajorModelModel.Store.Settings" store:Type="Tables" />
+    <EntitySet Name="Shops" EntityType="MajorModelModel.Store.Shops" store:Type="Tables" />
+    <EntitySet Name="Spells" EntityType="MajorModelModel.Store.Spells" store:Type="Tables" />
+  </EntityContainer>
+  <EntityType Name="Classes">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="29" />
+    <Property Name="Min HP" Type="int" Nullable="false" />
+    <Property Name="Max HP" Type="int" Nullable="false" />
+    <Property Name="EXP %" Type="int" Nullable="false" />
+    <Property Name="Magic Type" Type="int" Nullable="false" />
+    <Property Name="Magic LVL" Type="int" Nullable="false" />
+    <Property Name="Weapon" Type="int" Nullable="false" />
+    <Property Name="Armour" Type="int" Nullable="false" />
+    <Property Name="Combat" Type="int" Nullable="false" />
+    <Property Name="Title Text" Type="int" Nullable="false" />
+    <Property Name="Ability 0" Type="int" Nullable="false" />
+    <Property Name="Ability Value 0" Type="int" Nullable="false" />
+    <Property Name="Ability 1" Type="int" Nullable="false" />
+    <Property Name="Ability Value 1" Type="int" Nullable="false" />
+    <Property Name="Ability 2" Type="int" Nullable="false" />
+    <Property Name="Ability Value 2" Type="int" Nullable="false" />
+    <Property Name="Ability 3" Type="int" Nullable="false" />
+    <Property Name="Ability Value 3" Type="int" Nullable="false" />
+    <Property Name="Ability 4" Type="int" Nullable="false" />
+    <Property Name="Ability Value 4" Type="int" Nullable="false" />
+    <Property Name="Ability 5" Type="int" Nullable="false" />
+    <Property Name="Ability Value 5" Type="int" Nullable="false" />
+    <Property Name="Ability 6" Type="int" Nullable="false" />
+    <Property Name="Ability Value 6" Type="int" Nullable="false" />
+    <Property Name="Ability 7" Type="int" Nullable="false" />
+    <Property Name="Ability Value 7" Type="int" Nullable="false" />
+    <Property Name="Ability 8" Type="int" Nullable="false" />
+    <Property Name="Ability Value 8" Type="int" Nullable="false" />
+    <Property Name="Ability 9" Type="int" Nullable="false" />
+    <Property Name="Ability Value 9" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="29" />
+    <Property Name="Game Limit" Type="int" Nullable="false" />
+    <Property Name="Desc1" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="Desc2" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="Desc3" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="Desc4" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="Desc5" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="Desc6" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="Weight" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Uses" Type="int" Nullable="false" />
+    <Property Name="Cost" Type="int" Nullable="false" />
+    <Property Name="Cost Type" Type="int" Nullable="false" />
+    <Property Name="Min Hit" Type="int" Nullable="false" />
+    <Property Name="Max Hit" Type="int" Nullable="false" />
+    <Property Name="AC" Type="int" Nullable="false" />
+    <Property Name="DR" Type="int" Nullable="false" />
+    <Property Name="Weapon" Type="int" Nullable="false" />
+    <Property Name="Armour" Type="int" Nullable="false" />
+    <Property Name="Worn On" Type="int" Nullable="false" />
+    <Property Name="Accuracy" Type="int" Nullable="false" />
+    <Property Name="Gettable" Type="int" Nullable="false" />
+    <Property Name="Req Str" Type="int" Nullable="false" />
+    <Property Name="Speed" Type="int" Nullable="false" />
+    <Property Name="Robable" Type="int" Nullable="false" />
+    <Property Name="Hit Msg" Type="int" Nullable="false" />
+    <Property Name="Miss Msg" Type="int" Nullable="false" />
+    <Property Name="Read Msg" Type="int" Nullable="false" />
+    <Property Name="Distruct Msg" Type="int" Nullable="false" />
+    <Property Name="Not Droppable" Type="int" Nullable="false" />
+    <Property Name="Destroy On Death" Type="int" Nullable="false" />
+    <Property Name="Retain After Uses" Type="int" Nullable="false" />
+    <Property Name="OpenRunic" Type="int" Nullable="false" />
+    <Property Name="OpenPlatinum" Type="int" Nullable="false" />
+    <Property Name="OpenGold" Type="int" Nullable="false" />
+    <Property Name="OpenSilver" Type="int" Nullable="false" />
+    <Property Name="OpenCopper" Type="int" Nullable="false" />
+    <Property Name="Class 0" Type="int" Nullable="false" />
+    <Property Name="Class 1" Type="int" Nullable="false" />
+    <Property Name="Class 2" Type="int" Nullable="false" />
+    <Property Name="Class 3" Type="int" Nullable="false" />
+    <Property Name="Class 4" Type="int" Nullable="false" />
+    <Property Name="Class 5" Type="int" Nullable="false" />
+    <Property Name="Class 6" Type="int" Nullable="false" />
+    <Property Name="Class 7" Type="int" Nullable="false" />
+    <Property Name="Class 8" Type="int" Nullable="false" />
+    <Property Name="Class 9" Type="int" Nullable="false" />
+    <Property Name="Race 0" Type="int" Nullable="false" />
+    <Property Name="Race 1" Type="int" Nullable="false" />
+    <Property Name="Race 2" Type="int" Nullable="false" />
+    <Property Name="Race 3" Type="int" Nullable="false" />
+    <Property Name="Race 4" Type="int" Nullable="false" />
+    <Property Name="Race 5" Type="int" Nullable="false" />
+    <Property Name="Race 6" Type="int" Nullable="false" />
+    <Property Name="Race 7" Type="int" Nullable="false" />
+    <Property Name="Race 8" Type="int" Nullable="false" />
+    <Property Name="Race 9" Type="int" Nullable="false" />
+    <Property Name="Negate 0" Type="int" Nullable="false" />
+    <Property Name="Negate 1" Type="int" Nullable="false" />
+    <Property Name="Negate 2" Type="int" Nullable="false" />
+    <Property Name="Negate 3" Type="int" Nullable="false" />
+    <Property Name="Negate 4" Type="int" Nullable="false" />
+    <Property Name="Negate 5" Type="int" Nullable="false" />
+    <Property Name="Negate 6" Type="int" Nullable="false" />
+    <Property Name="Negate 7" Type="int" Nullable="false" />
+    <Property Name="Negate 8" Type="int" Nullable="false" />
+    <Property Name="Negate 9" Type="int" Nullable="false" />
+    <Property Name="Ability 0" Type="int" Nullable="false" />
+    <Property Name="Ability Value 0" Type="int" Nullable="false" />
+    <Property Name="Ability 1" Type="int" Nullable="false" />
+    <Property Name="Ability Value 1" Type="int" Nullable="false" />
+    <Property Name="Ability 2" Type="int" Nullable="false" />
+    <Property Name="Ability Value 2" Type="int" Nullable="false" />
+    <Property Name="Ability 3" Type="int" Nullable="false" />
+    <Property Name="Ability Value 3" Type="int" Nullable="false" />
+    <Property Name="Ability 4" Type="int" Nullable="false" />
+    <Property Name="Ability Value 4" Type="int" Nullable="false" />
+    <Property Name="Ability 5" Type="int" Nullable="false" />
+    <Property Name="Ability Value 5" Type="int" Nullable="false" />
+    <Property Name="Ability 6" Type="int" Nullable="false" />
+    <Property Name="Ability Value 6" Type="int" Nullable="false" />
+    <Property Name="Ability 7" Type="int" Nullable="false" />
+    <Property Name="Ability Value 7" Type="int" Nullable="false" />
+    <Property Name="Ability 8" Type="int" Nullable="false" />
+    <Property Name="Ability Value 8" Type="int" Nullable="false" />
+    <Property Name="Ability 9" Type="int" Nullable="false" />
+    <Property Name="Ability Value 9" Type="int" Nullable="false" />
+    <Property Name="Ability 10" Type="int" Nullable="false" />
+    <Property Name="Ability Value 10" Type="int" Nullable="false" />
+    <Property Name="Ability 11" Type="int" Nullable="false" />
+    <Property Name="Ability Value 11" Type="int" Nullable="false" />
+    <Property Name="Ability 12" Type="int" Nullable="false" />
+    <Property Name="Ability Value 12" Type="int" Nullable="false" />
+    <Property Name="Ability 13" Type="int" Nullable="false" />
+    <Property Name="Ability Value 13" Type="int" Nullable="false" />
+    <Property Name="Ability 14" Type="int" Nullable="false" />
+    <Property Name="Ability Value 14" Type="int" Nullable="false" />
+    <Property Name="Ability 15" Type="int" Nullable="false" />
+    <Property Name="Ability Value 15" Type="int" Nullable="false" />
+    <Property Name="Ability 16" Type="int" Nullable="false" />
+    <Property Name="Ability Value 16" Type="int" Nullable="false" />
+    <Property Name="Ability 17" Type="int" Nullable="false" />
+    <Property Name="Ability Value 17" Type="int" Nullable="false" />
+    <Property Name="Ability 18" Type="int" Nullable="false" />
+    <Property Name="Ability Value 18" Type="int" Nullable="false" />
+    <Property Name="Ability 19" Type="int" Nullable="false" />
+    <Property Name="Ability Value 19" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Messages">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="Line 1" Type="nvarchar" Nullable="false" MaxLength="74" />
+    <Property Name="Line 2" Type="nvarchar" Nullable="false" MaxLength="74" />
+    <Property Name="Line 3" Type="nvarchar" Nullable="false" MaxLength="74" />
+  </EntityType>
+  <EntityType Name="Monsters">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="29" />
+    <Property Name="Group" Type="int" Nullable="false" />
+    <Property Name="Index" Type="int" Nullable="false" />
+    <Property Name="Weapon Number" Type="int" Nullable="false" />
+    <Property Name="AC" Type="int" Nullable="false" />
+    <Property Name="DR" Type="int" Nullable="false" />
+    <Property Name="Follow" Type="int" Nullable="false" />
+    <Property Name="MR" Type="int" Nullable="false" />
+    <Property Name="Experience" Type="float" Nullable="false" />
+    <Property Name="Hit Points" Type="int" Nullable="false" />
+    <Property Name="HP Regen" Type="int" Nullable="false" />
+    <Property Name="Energy" Type="int" Nullable="false" />
+    <Property Name="Game Limit" Type="int" Nullable="false" />
+    <Property Name="Charm LvL" Type="int" Nullable="false" />
+    <Property Name="Charm RES" Type="int" Nullable="false" />
+    <Property Name="BS Defense" Type="int" Nullable="false" />
+    <Property Name="Active" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Undead" Type="int" Nullable="false" />
+    <Property Name="Alignment" Type="int" Nullable="false" />
+    <Property Name="Gender" Type="int" Nullable="false" />
+    <Property Name="Regen Time" Type="int" Nullable="false" />
+    <Property Name="Date Killed" Type="int" Nullable="false" />
+    <Property Name="Time Killed" Type="int" Nullable="false" />
+    <Property Name="Runic" Type="int" Nullable="false" />
+    <Property Name="Platinum" Type="int" Nullable="false" />
+    <Property Name="Gold" Type="int" Nullable="false" />
+    <Property Name="Silver" Type="int" Nullable="false" />
+    <Property Name="Copper" Type="int" Nullable="false" />
+    <Property Name="Move Msg" Type="int" Nullable="false" />
+    <Property Name="Death Msg" Type="int" Nullable="false" />
+    <Property Name="Greet Txt" Type="int" Nullable="false" />
+    <Property Name="Desc Txt" Type="int" Nullable="false" />
+    <Property Name="Talk Txt" Type="int" Nullable="false" />
+    <Property Name="Death Spell" Type="int" Nullable="false" />
+    <Property Name="Create Spell" Type="int" Nullable="false" />
+    <Property Name="Desc 1" Type="nvarchar" Nullable="false" MaxLength="70" />
+    <Property Name="Desc 2" Type="nvarchar" Nullable="false" MaxLength="70" />
+    <Property Name="Desc 3" Type="nvarchar" Nullable="false" MaxLength="70" />
+    <Property Name="Desc 4" Type="nvarchar" Nullable="false" MaxLength="70" />
+    <Property Name="Attack Type 0" Type="int" Nullable="false" />
+    <Property Name="Attack Accu/Spell 0" Type="int" Nullable="false" />
+    <Property Name="Attack % 0" Type="int" Nullable="false" />
+    <Property Name="Attack Min Hit/Cast % 0" Type="int" Nullable="false" />
+    <Property Name="Attack Max Hit/Cast LVL 0" Type="int" Nullable="false" />
+    <Property Name="Attack Hit Msg 0" Type="int" Nullable="false" />
+    <Property Name="Attack Dodge Msg 0" Type="int" Nullable="false" />
+    <Property Name="Attack Miss Msg 0" Type="int" Nullable="false" />
+    <Property Name="Attack Energy 0" Type="int" Nullable="false" />
+    <Property Name="Attack Hit Spell 0" Type="int" Nullable="false" />
+    <Property Name="Spell Number 0" Type="int" Nullable="false" />
+    <Property Name="Spell Cast % 0" Type="int" Nullable="false" />
+    <Property Name="Spell Cast LVL 0" Type="int" Nullable="false" />
+    <Property Name="Attack Type 1" Type="int" Nullable="false" />
+    <Property Name="Attack Accu/Spell 1" Type="int" Nullable="false" />
+    <Property Name="Attack % 1" Type="int" Nullable="false" />
+    <Property Name="Attack Min Hit/Cast % 1" Type="int" Nullable="false" />
+    <Property Name="Attack Max Hit/Cast LVL 1" Type="int" Nullable="false" />
+    <Property Name="Attack Hit Msg 1" Type="int" Nullable="false" />
+    <Property Name="Attack Dodge Msg 1" Type="int" Nullable="false" />
+    <Property Name="Attack Miss Msg 1" Type="int" Nullable="false" />
+    <Property Name="Attack Energy 1" Type="int" Nullable="false" />
+    <Property Name="Attack Hit Spell 1" Type="int" Nullable="false" />
+    <Property Name="Spell Number 1" Type="int" Nullable="false" />
+    <Property Name="Spell Cast % 1" Type="int" Nullable="false" />
+    <Property Name="Spell Cast LVL 1" Type="int" Nullable="false" />
+    <Property Name="Attack Type 2" Type="int" Nullable="false" />
+    <Property Name="Attack Accu/Spell 2" Type="int" Nullable="false" />
+    <Property Name="Attack % 2" Type="int" Nullable="false" />
+    <Property Name="Attack Min Hit/Cast % 2" Type="int" Nullable="false" />
+    <Property Name="Attack Max Hit/Cast LVL 2" Type="int" Nullable="false" />
+    <Property Name="Attack Hit Msg 2" Type="int" Nullable="false" />
+    <Property Name="Attack Dodge Msg 2" Type="int" Nullable="false" />
+    <Property Name="Attack Miss Msg 2" Type="int" Nullable="false" />
+    <Property Name="Attack Energy 2" Type="int" Nullable="false" />
+    <Property Name="Attack Hit Spell 2" Type="int" Nullable="false" />
+    <Property Name="Spell Number 2" Type="int" Nullable="false" />
+    <Property Name="Spell Cast % 2" Type="int" Nullable="false" />
+    <Property Name="Spell Cast LVL 2" Type="int" Nullable="false" />
+    <Property Name="Attack Type 3" Type="int" Nullable="false" />
+    <Property Name="Attack Accu/Spell 3" Type="int" Nullable="false" />
+    <Property Name="Attack % 3" Type="int" Nullable="false" />
+    <Property Name="Attack Min Hit/Cast % 3" Type="int" Nullable="false" />
+    <Property Name="Attack Max Hit/Cast LVL 3" Type="int" Nullable="false" />
+    <Property Name="Attack Hit Msg 3" Type="int" Nullable="false" />
+    <Property Name="Attack Dodge Msg 3" Type="int" Nullable="false" />
+    <Property Name="Attack Miss Msg 3" Type="int" Nullable="false" />
+    <Property Name="Attack Energy 3" Type="int" Nullable="false" />
+    <Property Name="Attack Hit Spell 3" Type="int" Nullable="false" />
+    <Property Name="Spell Number 3" Type="int" Nullable="false" />
+    <Property Name="Spell Cast % 3" Type="int" Nullable="false" />
+    <Property Name="Spell Cast LVL 3" Type="int" Nullable="false" />
+    <Property Name="Attack Type 4" Type="int" Nullable="false" />
+    <Property Name="Attack Accu/Spell 4" Type="int" Nullable="false" />
+    <Property Name="Attack % 4" Type="int" Nullable="false" />
+    <Property Name="Attack Min Hit/Cast % 4" Type="int" Nullable="false" />
+    <Property Name="Attack Max Hit/Cast LVL 4" Type="int" Nullable="false" />
+    <Property Name="Attack Hit Msg 4" Type="int" Nullable="false" />
+    <Property Name="Attack Dodge Msg 4" Type="int" Nullable="false" />
+    <Property Name="Attack Miss Msg 4" Type="int" Nullable="false" />
+    <Property Name="Attack Energy 4" Type="int" Nullable="false" />
+    <Property Name="Attack Hit Spell 4" Type="int" Nullable="false" />
+    <Property Name="Spell Number 4" Type="int" Nullable="false" />
+    <Property Name="Spell Cast % 4" Type="int" Nullable="false" />
+    <Property Name="Spell Cast LVL 4" Type="int" Nullable="false" />
+    <Property Name="Item Number 0" Type="int" Nullable="false" />
+    <Property Name="Item Uses 0" Type="int" Nullable="false" />
+    <Property Name="Item Drop % 0" Type="int" Nullable="false" />
+    <Property Name="Item Number 1" Type="int" Nullable="false" />
+    <Property Name="Item Uses 1" Type="int" Nullable="false" />
+    <Property Name="Item Drop % 1" Type="int" Nullable="false" />
+    <Property Name="Item Number 2" Type="int" Nullable="false" />
+    <Property Name="Item Uses 2" Type="int" Nullable="false" />
+    <Property Name="Item Drop % 2" Type="int" Nullable="false" />
+    <Property Name="Item Number 3" Type="int" Nullable="false" />
+    <Property Name="Item Uses 3" Type="int" Nullable="false" />
+    <Property Name="Item Drop % 3" Type="int" Nullable="false" />
+    <Property Name="Item Number 4" Type="int" Nullable="false" />
+    <Property Name="Item Uses 4" Type="int" Nullable="false" />
+    <Property Name="Item Drop % 4" Type="int" Nullable="false" />
+    <Property Name="Item Number 5" Type="int" Nullable="false" />
+    <Property Name="Item Uses 5" Type="int" Nullable="false" />
+    <Property Name="Item Drop % 5" Type="int" Nullable="false" />
+    <Property Name="Item Number 6" Type="int" Nullable="false" />
+    <Property Name="Item Uses 6" Type="int" Nullable="false" />
+    <Property Name="Item Drop % 6" Type="int" Nullable="false" />
+    <Property Name="Item Number 7" Type="int" Nullable="false" />
+    <Property Name="Item Uses 7" Type="int" Nullable="false" />
+    <Property Name="Item Drop % 7" Type="int" Nullable="false" />
+    <Property Name="Item Number 8" Type="int" Nullable="false" />
+    <Property Name="Item Uses 8" Type="int" Nullable="false" />
+    <Property Name="Item Drop % 8" Type="int" Nullable="false" />
+    <Property Name="Item Number 9" Type="int" Nullable="false" />
+    <Property Name="Item Uses 9" Type="int" Nullable="false" />
+    <Property Name="Item Drop % 9" Type="int" Nullable="false" />
+    <Property Name="Ability 0" Type="int" Nullable="false" />
+    <Property Name="Ability Value 0" Type="int" Nullable="false" />
+    <Property Name="Ability 1" Type="int" Nullable="false" />
+    <Property Name="Ability Value 1" Type="int" Nullable="false" />
+    <Property Name="Ability 2" Type="int" Nullable="false" />
+    <Property Name="Ability Value 2" Type="int" Nullable="false" />
+    <Property Name="Ability 3" Type="int" Nullable="false" />
+    <Property Name="Ability Value 3" Type="int" Nullable="false" />
+    <Property Name="Ability 4" Type="int" Nullable="false" />
+    <Property Name="Ability Value 4" Type="int" Nullable="false" />
+    <Property Name="Ability 5" Type="int" Nullable="false" />
+    <Property Name="Ability Value 5" Type="int" Nullable="false" />
+    <Property Name="Ability 6" Type="int" Nullable="false" />
+    <Property Name="Ability Value 6" Type="int" Nullable="false" />
+    <Property Name="Ability 7" Type="int" Nullable="false" />
+    <Property Name="Ability Value 7" Type="int" Nullable="false" />
+    <Property Name="Ability 8" Type="int" Nullable="false" />
+    <Property Name="Ability Value 8" Type="int" Nullable="false" />
+    <Property Name="Ability 9" Type="int" Nullable="false" />
+    <Property Name="Ability Value 9" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Races">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="29" />
+    <Property Name="Min INT" Type="int" Nullable="false" />
+    <Property Name="Min WIL" Type="int" Nullable="false" />
+    <Property Name="Min STR" Type="int" Nullable="false" />
+    <Property Name="Min HEA" Type="int" Nullable="false" />
+    <Property Name="Min AGL" Type="int" Nullable="false" />
+    <Property Name="Min CHM" Type="int" Nullable="false" />
+    <Property Name="Max INT" Type="int" Nullable="false" />
+    <Property Name="Max WIL" Type="int" Nullable="false" />
+    <Property Name="Max STR" Type="int" Nullable="false" />
+    <Property Name="Max HEA" Type="int" Nullable="false" />
+    <Property Name="Max AGL" Type="int" Nullable="false" />
+    <Property Name="Max CHM" Type="int" Nullable="false" />
+    <Property Name="HP Bonus" Type="int" Nullable="false" />
+    <Property Name="CP" Type="int" Nullable="false" />
+    <Property Name="EXP %" Type="int" Nullable="false" />
+    <Property Name="Ability 0" Type="int" Nullable="false" />
+    <Property Name="Ability Value 0" Type="int" Nullable="false" />
+    <Property Name="Ability 1" Type="int" Nullable="false" />
+    <Property Name="Ability Value 1" Type="int" Nullable="false" />
+    <Property Name="Ability 2" Type="int" Nullable="false" />
+    <Property Name="Ability Value 2" Type="int" Nullable="false" />
+    <Property Name="Ability 3" Type="int" Nullable="false" />
+    <Property Name="Ability Value 3" Type="int" Nullable="false" />
+    <Property Name="Ability 4" Type="int" Nullable="false" />
+    <Property Name="Ability Value 4" Type="int" Nullable="false" />
+    <Property Name="Ability 5" Type="int" Nullable="false" />
+    <Property Name="Ability Value 5" Type="int" Nullable="false" />
+    <Property Name="Ability 6" Type="int" Nullable="false" />
+    <Property Name="Ability Value 6" Type="int" Nullable="false" />
+    <Property Name="Ability 7" Type="int" Nullable="false" />
+    <Property Name="Ability Value 7" Type="int" Nullable="false" />
+    <Property Name="Ability 8" Type="int" Nullable="false" />
+    <Property Name="Ability Value 8" Type="int" Nullable="false" />
+    <Property Name="Ability 9" Type="int" Nullable="false" />
+    <Property Name="Ability Value 9" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rooms">
+    <Key>
+      <PropertyRef Name="Map Number" />
+      <PropertyRef Name="Room Number" />
+    </Key>
+    <Property Name="Map Number" Type="int" Nullable="false" />
+    <Property Name="Room Number" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="53" />
+    <Property Name="Desc 0" Type="nvarchar" Nullable="false" MaxLength="71" />
+    <Property Name="Desc 1" Type="nvarchar" Nullable="false" MaxLength="71" />
+    <Property Name="Desc 2" Type="nvarchar" Nullable="false" MaxLength="71" />
+    <Property Name="Desc 3" Type="nvarchar" Nullable="false" MaxLength="71" />
+    <Property Name="Desc 4" Type="nvarchar" Nullable="false" MaxLength="71" />
+    <Property Name="Desc 5" Type="nvarchar" Nullable="false" MaxLength="71" />
+    <Property Name="Desc 6" Type="nvarchar" Nullable="false" MaxLength="71" />
+    <Property Name="AnsiMap" Type="nvarchar" Nullable="false" MaxLength="13" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Shop Number" Type="int" Nullable="false" />
+    <Property Name="Gang House Number" Type="int" Nullable="false" />
+    <Property Name="Mon Type" Type="int" Nullable="false" />
+    <Property Name="Min Index" Type="int" Nullable="false" />
+    <Property Name="Max Index" Type="int" Nullable="false" />
+    <Property Name="Max Regen" Type="int" Nullable="false" />
+    <Property Name="Max Area" Type="int" Nullable="false" />
+    <Property Name="Control Room" Type="int" Nullable="false" />
+    <Property Name="Light" Type="int" Nullable="false" />
+    <Property Name="Attributes" Type="int" Nullable="false" />
+    <Property Name="Death Room" Type="int" Nullable="false" />
+    <Property Name="Exit Room" Type="int" Nullable="false" />
+    <Property Name="Command Text" Type="int" Nullable="false" />
+    <Property Name="Delay" Type="int" Nullable="false" />
+    <Property Name="Perm NPC" Type="int" Nullable="false" />
+    <Property Name="Spell" Type="int" Nullable="false" />
+    <Property Name="Exit 0" Type="int" Nullable="false" />
+    <Property Name="Type 0" Type="int" Nullable="false" />
+    <Property Name="Para1 0" Type="int" Nullable="false" />
+    <Property Name="Para2 0" Type="int" Nullable="false" />
+    <Property Name="Para3 0" Type="int" Nullable="false" />
+    <Property Name="Para4 0" Type="int" Nullable="false" />
+    <Property Name="Exit 1" Type="int" Nullable="false" />
+    <Property Name="Type 1" Type="int" Nullable="false" />
+    <Property Name="Para1 1" Type="int" Nullable="false" />
+    <Property Name="Para2 1" Type="int" Nullable="false" />
+    <Property Name="Para3 1" Type="int" Nullable="false" />
+    <Property Name="Para4 1" Type="int" Nullable="false" />
+    <Property Name="Exit 2" Type="int" Nullable="false" />
+    <Property Name="Type 2" Type="int" Nullable="false" />
+    <Property Name="Para1 2" Type="int" Nullable="false" />
+    <Property Name="Para2 2" Type="int" Nullable="false" />
+    <Property Name="Para3 2" Type="int" Nullable="false" />
+    <Property Name="Para4 2" Type="int" Nullable="false" />
+    <Property Name="Exit 3" Type="int" Nullable="false" />
+    <Property Name="Type 3" Type="int" Nullable="false" />
+    <Property Name="Para1 3" Type="int" Nullable="false" />
+    <Property Name="Para2 3" Type="int" Nullable="false" />
+    <Property Name="Para3 3" Type="int" Nullable="false" />
+    <Property Name="Para4 3" Type="int" Nullable="false" />
+    <Property Name="Exit 4" Type="int" Nullable="false" />
+    <Property Name="Type 4" Type="int" Nullable="false" />
+    <Property Name="Para1 4" Type="int" Nullable="false" />
+    <Property Name="Para2 4" Type="int" Nullable="false" />
+    <Property Name="Para3 4" Type="int" Nullable="false" />
+    <Property Name="Para4 4" Type="int" Nullable="false" />
+    <Property Name="Exit 5" Type="int" Nullable="false" />
+    <Property Name="Type 5" Type="int" Nullable="false" />
+    <Property Name="Para1 5" Type="int" Nullable="false" />
+    <Property Name="Para2 5" Type="int" Nullable="false" />
+    <Property Name="Para3 5" Type="int" Nullable="false" />
+    <Property Name="Para4 5" Type="int" Nullable="false" />
+    <Property Name="Exit 6" Type="int" Nullable="false" />
+    <Property Name="Type 6" Type="int" Nullable="false" />
+    <Property Name="Para1 6" Type="int" Nullable="false" />
+    <Property Name="Para2 6" Type="int" Nullable="false" />
+    <Property Name="Para3 6" Type="int" Nullable="false" />
+    <Property Name="Para4 6" Type="int" Nullable="false" />
+    <Property Name="Exit 7" Type="int" Nullable="false" />
+    <Property Name="Type 7" Type="int" Nullable="false" />
+    <Property Name="Para1 7" Type="int" Nullable="false" />
+    <Property Name="Para2 7" Type="int" Nullable="false" />
+    <Property Name="Para3 7" Type="int" Nullable="false" />
+    <Property Name="Para4 7" Type="int" Nullable="false" />
+    <Property Name="Exit 8" Type="int" Nullable="false" />
+    <Property Name="Type 8" Type="int" Nullable="false" />
+    <Property Name="Para1 8" Type="int" Nullable="false" />
+    <Property Name="Para2 8" Type="int" Nullable="false" />
+    <Property Name="Para3 8" Type="int" Nullable="false" />
+    <Property Name="Para4 8" Type="int" Nullable="false" />
+    <Property Name="Exit 9" Type="int" Nullable="false" />
+    <Property Name="Type 9" Type="int" Nullable="false" />
+    <Property Name="Para1 9" Type="int" Nullable="false" />
+    <Property Name="Para2 9" Type="int" Nullable="false" />
+    <Property Name="Para3 9" Type="int" Nullable="false" />
+    <Property Name="Para4 9" Type="int" Nullable="false" />
+    <Property Name="Placed Item 0" Type="int" Nullable="false" />
+    <Property Name="Placed Item 1" Type="int" Nullable="false" />
+    <Property Name="Placed Item 2" Type="int" Nullable="false" />
+    <Property Name="Placed Item 3" Type="int" Nullable="false" />
+    <Property Name="Placed Item 4" Type="int" Nullable="false" />
+    <Property Name="Placed Item 5" Type="int" Nullable="false" />
+    <Property Name="Placed Item 6" Type="int" Nullable="false" />
+    <Property Name="Placed Item 7" Type="int" Nullable="false" />
+    <Property Name="Placed Item 8" Type="int" Nullable="false" />
+    <Property Name="Placed Item 9" Type="int" Nullable="false" />
+    <Property Name="X" Type="int" />
+    <Property Name="Y" Type="int" />
+    <Property Name="Z" Type="int" />
+  </EntityType>
+  <EntityType Name="Settings">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Value" Type="ntext" Nullable="false" />
+    <Property Name="Description" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Shops">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="39" />
+    <Property Name="Desc A" Type="nvarchar" Nullable="false" MaxLength="52" />
+    <Property Name="Desc B" Type="nvarchar" Nullable="false" MaxLength="52" />
+    <Property Name="Desc C" Type="nvarchar" Nullable="false" MaxLength="52" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Min Lvl" Type="int" Nullable="false" />
+    <Property Name="Max Lvl" Type="int" Nullable="false" />
+    <Property Name="MarkUp" Type="int" Nullable="false" />
+    <Property Name="Class Limit" Type="int" Nullable="false" />
+    <Property Name="Item 0" Type="int" Nullable="false" />
+    <Property Name="Max 0" Type="int" Nullable="false" />
+    <Property Name="Normal 0" Type="int" Nullable="false" />
+    <Property Name="Regen Time 0" Type="int" Nullable="false" />
+    <Property Name="Regen Number0" Type="int" Nullable="false" />
+    <Property Name="Regen %0" Type="int" Nullable="false" />
+    <Property Name="Item 1" Type="int" Nullable="false" />
+    <Property Name="Max 1" Type="int" Nullable="false" />
+    <Property Name="Normal 1" Type="int" Nullable="false" />
+    <Property Name="Regen Time 1" Type="int" Nullable="false" />
+    <Property Name="Regen Number1" Type="int" Nullable="false" />
+    <Property Name="Regen %1" Type="int" Nullable="false" />
+    <Property Name="Item 2" Type="int" Nullable="false" />
+    <Property Name="Max 2" Type="int" Nullable="false" />
+    <Property Name="Normal 2" Type="int" Nullable="false" />
+    <Property Name="Regen Time 2" Type="int" Nullable="false" />
+    <Property Name="Regen Number2" Type="int" Nullable="false" />
+    <Property Name="Regen %2" Type="int" Nullable="false" />
+    <Property Name="Item 3" Type="int" Nullable="false" />
+    <Property Name="Max 3" Type="int" Nullable="false" />
+    <Property Name="Normal 3" Type="int" Nullable="false" />
+    <Property Name="Regen Time 3" Type="int" Nullable="false" />
+    <Property Name="Regen Number3" Type="int" Nullable="false" />
+    <Property Name="Regen %3" Type="int" Nullable="false" />
+    <Property Name="Item 4" Type="int" Nullable="false" />
+    <Property Name="Max 4" Type="int" Nullable="false" />
+    <Property Name="Normal 4" Type="int" Nullable="false" />
+    <Property Name="Regen Time 4" Type="int" Nullable="false" />
+    <Property Name="Regen Number4" Type="int" Nullable="false" />
+    <Property Name="Regen %4" Type="int" Nullable="false" />
+    <Property Name="Item 5" Type="int" Nullable="false" />
+    <Property Name="Max 5" Type="int" Nullable="false" />
+    <Property Name="Normal 5" Type="int" Nullable="false" />
+    <Property Name="Regen Time 5" Type="int" Nullable="false" />
+    <Property Name="Regen Number5" Type="int" Nullable="false" />
+    <Property Name="Regen %5" Type="int" Nullable="false" />
+    <Property Name="Item 6" Type="int" Nullable="false" />
+    <Property Name="Max 6" Type="int" Nullable="false" />
+    <Property Name="Normal 6" Type="int" Nullable="false" />
+    <Property Name="Regen Time 6" Type="int" Nullable="false" />
+    <Property Name="Regen Number6" Type="int" Nullable="false" />
+    <Property Name="Regen %6" Type="int" Nullable="false" />
+    <Property Name="Item 7" Type="int" Nullable="false" />
+    <Property Name="Max 7" Type="int" Nullable="false" />
+    <Property Name="Normal 7" Type="int" Nullable="false" />
+    <Property Name="Regen Time 7" Type="int" Nullable="false" />
+    <Property Name="Regen Number7" Type="int" Nullable="false" />
+    <Property Name="Regen %7" Type="int" Nullable="false" />
+    <Property Name="Item 8" Type="int" Nullable="false" />
+    <Property Name="Max 8" Type="int" Nullable="false" />
+    <Property Name="Normal 8" Type="int" Nullable="false" />
+    <Property Name="Regen Time 8" Type="int" Nullable="false" />
+    <Property Name="Regen Number8" Type="int" Nullable="false" />
+    <Property Name="Regen %8" Type="int" Nullable="false" />
+    <Property Name="Item 9" Type="int" Nullable="false" />
+    <Property Name="Max 9" Type="int" Nullable="false" />
+    <Property Name="Normal 9" Type="int" Nullable="false" />
+    <Property Name="Regen Time 9" Type="int" Nullable="false" />
+    <Property Name="Regen Number9" Type="int" Nullable="false" />
+    <Property Name="Regen %9" Type="int" Nullable="false" />
+    <Property Name="Item 10" Type="int" Nullable="false" />
+    <Property Name="Max 10" Type="int" Nullable="false" />
+    <Property Name="Normal 10" Type="int" Nullable="false" />
+    <Property Name="Regen Time 10" Type="int" Nullable="false" />
+    <Property Name="Regen Number10" Type="int" Nullable="false" />
+    <Property Name="Regen %10" Type="int" Nullable="false" />
+    <Property Name="Item 11" Type="int" Nullable="false" />
+    <Property Name="Max 11" Type="int" Nullable="false" />
+    <Property Name="Normal 11" Type="int" Nullable="false" />
+    <Property Name="Regen Time 11" Type="int" Nullable="false" />
+    <Property Name="Regen Number11" Type="int" Nullable="false" />
+    <Property Name="Regen %11" Type="int" Nullable="false" />
+    <Property Name="Item 12" Type="int" Nullable="false" />
+    <Property Name="Max 12" Type="int" Nullable="false" />
+    <Property Name="Normal 12" Type="int" Nullable="false" />
+    <Property Name="Regen Time 12" Type="int" Nullable="false" />
+    <Property Name="Regen Number12" Type="int" Nullable="false" />
+    <Property Name="Regen %12" Type="int" Nullable="false" />
+    <Property Name="Item 13" Type="int" Nullable="false" />
+    <Property Name="Max 13" Type="int" Nullable="false" />
+    <Property Name="Normal 13" Type="int" Nullable="false" />
+    <Property Name="Regen Time 13" Type="int" Nullable="false" />
+    <Property Name="Regen Number13" Type="int" Nullable="false" />
+    <Property Name="Regen %13" Type="int" Nullable="false" />
+    <Property Name="Item 14" Type="int" Nullable="false" />
+    <Property Name="Max 14" Type="int" Nullable="false" />
+    <Property Name="Normal 14" Type="int" Nullable="false" />
+    <Property Name="Regen Time 14" Type="int" Nullable="false" />
+    <Property Name="Regen Number14" Type="int" Nullable="false" />
+    <Property Name="Regen %14" Type="int" Nullable="false" />
+    <Property Name="Item 15" Type="int" Nullable="false" />
+    <Property Name="Max 15" Type="int" Nullable="false" />
+    <Property Name="Normal 15" Type="int" Nullable="false" />
+    <Property Name="Regen Time 15" Type="int" Nullable="false" />
+    <Property Name="Regen Number15" Type="int" Nullable="false" />
+    <Property Name="Regen %15" Type="int" Nullable="false" />
+    <Property Name="Item 16" Type="int" Nullable="false" />
+    <Property Name="Max 16" Type="int" Nullable="false" />
+    <Property Name="Normal 16" Type="int" Nullable="false" />
+    <Property Name="Regen Time 16" Type="int" Nullable="false" />
+    <Property Name="Regen Number16" Type="int" Nullable="false" />
+    <Property Name="Regen %16" Type="int" Nullable="false" />
+    <Property Name="Item 17" Type="int" Nullable="false" />
+    <Property Name="Max 17" Type="int" Nullable="false" />
+    <Property Name="Normal 17" Type="int" Nullable="false" />
+    <Property Name="Regen Time 17" Type="int" Nullable="false" />
+    <Property Name="Regen Number17" Type="int" Nullable="false" />
+    <Property Name="Regen %17" Type="int" Nullable="false" />
+    <Property Name="Item 18" Type="int" Nullable="false" />
+    <Property Name="Max 18" Type="int" Nullable="false" />
+    <Property Name="Normal 18" Type="int" Nullable="false" />
+    <Property Name="Regen Time 18" Type="int" Nullable="false" />
+    <Property Name="Regen Number18" Type="int" Nullable="false" />
+    <Property Name="Regen %18" Type="int" Nullable="false" />
+    <Property Name="Item 19" Type="int" Nullable="false" />
+    <Property Name="Max 19" Type="int" Nullable="false" />
+    <Property Name="Normal 19" Type="int" Nullable="false" />
+    <Property Name="Regen Time 19" Type="int" Nullable="false" />
+    <Property Name="Regen Number19" Type="int" Nullable="false" />
+    <Property Name="Regen %19" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Spells">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="29" />
+    <Property Name="Short Name" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Level" Type="int" Nullable="false" />
+    <Property Name="Desc 1" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Desc 2" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Cast MSG A" Type="int" Nullable="false" />
+    <Property Name="Cast MSG B" Type="int" Nullable="false" />
+    <Property Name="MSG Style" Type="int" Nullable="false" />
+    <Property Name="Energy" Type="int" Nullable="false" />
+    <Property Name="Mana" Type="int" Nullable="false" />
+    <Property Name="Min" Type="int" Nullable="false" />
+    <Property Name="Max" Type="int" Nullable="false" />
+    <Property Name="Spell Type" Type="int" Nullable="false" />
+    <Property Name="Type of Resists" Type="int" Nullable="false" />
+    <Property Name="Difficulty" Type="int" Nullable="false" />
+    <Property Name="Target" Type="int" Nullable="false" />
+    <Property Name="Duration" Type="int" Nullable="false" />
+    <Property Name="Attack Type" Type="int" Nullable="false" />
+    <Property Name="Resist Ability" Type="int" Nullable="false" />
+    <Property Name="Magery A" Type="int" Nullable="false" />
+    <Property Name="Magery B" Type="int" Nullable="false" />
+    <Property Name="Level Cap" Type="int" Nullable="false" />
+    <Property Name="LVLS Max Increase" Type="int" Nullable="false" />
+    <Property Name="Max Increase" Type="int" Nullable="false" />
+    <Property Name="LVLS Min Increase" Type="int" Nullable="false" />
+    <Property Name="Min Increase" Type="int" Nullable="false" />
+    <Property Name="LVLS Dur Increase" Type="int" Nullable="false" />
+    <Property Name="Dur Increase" Type="int" Nullable="false" />
+    <Property Name="UNDEFINED01" Type="int" Nullable="false" />
+    <Property Name="UNDEFINED02" Type="int" Nullable="false" />
+    <Property Name="Ability 0" Type="int" Nullable="false" />
+    <Property Name="Ability Value 0" Type="int" Nullable="false" />
+    <Property Name="Ability 1" Type="int" Nullable="false" />
+    <Property Name="Ability Value 1" Type="int" Nullable="false" />
+    <Property Name="Ability 2" Type="int" Nullable="false" />
+    <Property Name="Ability Value 2" Type="int" Nullable="false" />
+    <Property Name="Ability 3" Type="int" Nullable="false" />
+    <Property Name="Ability Value 3" Type="int" Nullable="false" />
+    <Property Name="Ability 4" Type="int" Nullable="false" />
+    <Property Name="Ability Value 4" Type="int" Nullable="false" />
+    <Property Name="Ability 5" Type="int" Nullable="false" />
+    <Property Name="Ability Value 5" Type="int" Nullable="false" />
+    <Property Name="Ability 6" Type="int" Nullable="false" />
+    <Property Name="Ability Value 6" Type="int" Nullable="false" />
+    <Property Name="Ability 7" Type="int" Nullable="false" />
+    <Property Name="Ability Value 7" Type="int" Nullable="false" />
+    <Property Name="Ability 8" Type="int" Nullable="false" />
+    <Property Name="Ability Value 8" Type="int" Nullable="false" />
+    <Property Name="Ability 9" Type="int" Nullable="false" />
+    <Property Name="Ability Value 9" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>
+</edmx:StorageModels>
+<edmx:ConceptualModels>
+<Schema Namespace="MajorModelModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="MajorModelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Classes" EntityType="MajorModelModel.Class" />
+    <EntitySet Name="Items" EntityType="MajorModelModel.Item" />
+    <EntitySet Name="Messages" EntityType="MajorModelModel.Message" />
+    <EntitySet Name="Monsters" EntityType="MajorModelModel.Monster" />
+    <EntitySet Name="Races" EntityType="MajorModelModel.Race" />
+    <EntitySet Name="Rooms" EntityType="MajorModelModel.Room" />
+    <EntitySet Name="Settings" EntityType="MajorModelModel.Setting" />
+    <EntitySet Name="Shops" EntityType="MajorModelModel.Shop" />
+    <EntitySet Name="Spells" EntityType="MajorModelModel.Spell" />
+  </EntityContainer>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="29" Unicode="true" FixedLength="false" />
+    <Property Name="Min_HP" Type="Int32" Nullable="false" />
+    <Property Name="Max_HP" Type="Int32" Nullable="false" />
+    <Property Name="EXP__" Type="Int32" Nullable="false" />
+    <Property Name="Magic_Type" Type="Int32" Nullable="false" />
+    <Property Name="Magic_LVL" Type="Int32" Nullable="false" />
+    <Property Name="Weapon" Type="Int32" Nullable="false" />
+    <Property Name="Armour" Type="Int32" Nullable="false" />
+    <Property Name="Combat" Type="Int32" Nullable="false" />
+    <Property Name="Title_Text" Type="Int32" Nullable="false" />
+    <Property Name="Ability_0" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_0" Type="Int32" Nullable="false" />
+    <Property Name="Ability_1" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_1" Type="Int32" Nullable="false" />
+    <Property Name="Ability_2" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_2" Type="Int32" Nullable="false" />
+    <Property Name="Ability_3" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_3" Type="Int32" Nullable="false" />
+    <Property Name="Ability_4" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_4" Type="Int32" Nullable="false" />
+    <Property Name="Ability_5" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_5" Type="Int32" Nullable="false" />
+    <Property Name="Ability_6" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_6" Type="Int32" Nullable="false" />
+    <Property Name="Ability_7" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_7" Type="Int32" Nullable="false" />
+    <Property Name="Ability_8" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_8" Type="Int32" Nullable="false" />
+    <Property Name="Ability_9" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_9" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="29" Unicode="true" FixedLength="false" />
+    <Property Name="Game_Limit" Type="Int32" Nullable="false" />
+    <Property Name="Desc1" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="Desc2" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="Desc3" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="Desc4" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="Desc5" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="Desc6" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="Weight" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Uses" Type="Int32" Nullable="false" />
+    <Property Name="Cost" Type="Int32" Nullable="false" />
+    <Property Name="Cost_Type" Type="Int32" Nullable="false" />
+    <Property Name="Min_Hit" Type="Int32" Nullable="false" />
+    <Property Name="Max_Hit" Type="Int32" Nullable="false" />
+    <Property Name="AC" Type="Int32" Nullable="false" />
+    <Property Name="DR" Type="Int32" Nullable="false" />
+    <Property Name="Weapon" Type="Int32" Nullable="false" />
+    <Property Name="Armour" Type="Int32" Nullable="false" />
+    <Property Name="Worn_On" Type="Int32" Nullable="false" />
+    <Property Name="Accuracy" Type="Int32" Nullable="false" />
+    <Property Name="Gettable" Type="Int32" Nullable="false" />
+    <Property Name="Req_Str" Type="Int32" Nullable="false" />
+    <Property Name="Speed" Type="Int32" Nullable="false" />
+    <Property Name="Robable" Type="Int32" Nullable="false" />
+    <Property Name="Hit_Msg" Type="Int32" Nullable="false" />
+    <Property Name="Miss_Msg" Type="Int32" Nullable="false" />
+    <Property Name="Read_Msg" Type="Int32" Nullable="false" />
+    <Property Name="Distruct_Msg" Type="Int32" Nullable="false" />
+    <Property Name="Not_Droppable" Type="Int32" Nullable="false" />
+    <Property Name="Destroy_On_Death" Type="Int32" Nullable="false" />
+    <Property Name="Retain_After_Uses" Type="Int32" Nullable="false" />
+    <Property Name="OpenRunic" Type="Int32" Nullable="false" />
+    <Property Name="OpenPlatinum" Type="Int32" Nullable="false" />
+    <Property Name="OpenGold" Type="Int32" Nullable="false" />
+    <Property Name="OpenSilver" Type="Int32" Nullable="false" />
+    <Property Name="OpenCopper" Type="Int32" Nullable="false" />
+    <Property Name="Class_0" Type="Int32" Nullable="false" />
+    <Property Name="Class_1" Type="Int32" Nullable="false" />
+    <Property Name="Class_2" Type="Int32" Nullable="false" />
+    <Property Name="Class_3" Type="Int32" Nullable="false" />
+    <Property Name="Class_4" Type="Int32" Nullable="false" />
+    <Property Name="Class_5" Type="Int32" Nullable="false" />
+    <Property Name="Class_6" Type="Int32" Nullable="false" />
+    <Property Name="Class_7" Type="Int32" Nullable="false" />
+    <Property Name="Class_8" Type="Int32" Nullable="false" />
+    <Property Name="Class_9" Type="Int32" Nullable="false" />
+    <Property Name="Race_0" Type="Int32" Nullable="false" />
+    <Property Name="Race_1" Type="Int32" Nullable="false" />
+    <Property Name="Race_2" Type="Int32" Nullable="false" />
+    <Property Name="Race_3" Type="Int32" Nullable="false" />
+    <Property Name="Race_4" Type="Int32" Nullable="false" />
+    <Property Name="Race_5" Type="Int32" Nullable="false" />
+    <Property Name="Race_6" Type="Int32" Nullable="false" />
+    <Property Name="Race_7" Type="Int32" Nullable="false" />
+    <Property Name="Race_8" Type="Int32" Nullable="false" />
+    <Property Name="Race_9" Type="Int32" Nullable="false" />
+    <Property Name="Negate_0" Type="Int32" Nullable="false" />
+    <Property Name="Negate_1" Type="Int32" Nullable="false" />
+    <Property Name="Negate_2" Type="Int32" Nullable="false" />
+    <Property Name="Negate_3" Type="Int32" Nullable="false" />
+    <Property Name="Negate_4" Type="Int32" Nullable="false" />
+    <Property Name="Negate_5" Type="Int32" Nullable="false" />
+    <Property Name="Negate_6" Type="Int32" Nullable="false" />
+    <Property Name="Negate_7" Type="Int32" Nullable="false" />
+    <Property Name="Negate_8" Type="Int32" Nullable="false" />
+    <Property Name="Negate_9" Type="Int32" Nullable="false" />
+    <Property Name="Ability_0" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_0" Type="Int32" Nullable="false" />
+    <Property Name="Ability_1" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_1" Type="Int32" Nullable="false" />
+    <Property Name="Ability_2" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_2" Type="Int32" Nullable="false" />
+    <Property Name="Ability_3" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_3" Type="Int32" Nullable="false" />
+    <Property Name="Ability_4" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_4" Type="Int32" Nullable="false" />
+    <Property Name="Ability_5" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_5" Type="Int32" Nullable="false" />
+    <Property Name="Ability_6" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_6" Type="Int32" Nullable="false" />
+    <Property Name="Ability_7" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_7" Type="Int32" Nullable="false" />
+    <Property Name="Ability_8" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_8" Type="Int32" Nullable="false" />
+    <Property Name="Ability_9" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_9" Type="Int32" Nullable="false" />
+    <Property Name="Ability_10" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_10" Type="Int32" Nullable="false" />
+    <Property Name="Ability_11" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_11" Type="Int32" Nullable="false" />
+    <Property Name="Ability_12" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_12" Type="Int32" Nullable="false" />
+    <Property Name="Ability_13" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_13" Type="Int32" Nullable="false" />
+    <Property Name="Ability_14" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_14" Type="Int32" Nullable="false" />
+    <Property Name="Ability_15" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_15" Type="Int32" Nullable="false" />
+    <Property Name="Ability_16" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_16" Type="Int32" Nullable="false" />
+    <Property Name="Ability_17" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_17" Type="Int32" Nullable="false" />
+    <Property Name="Ability_18" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_18" Type="Int32" Nullable="false" />
+    <Property Name="Ability_19" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_19" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="Line_1" Type="String" Nullable="false" MaxLength="74" Unicode="true" FixedLength="false" />
+    <Property Name="Line_2" Type="String" Nullable="false" MaxLength="74" Unicode="true" FixedLength="false" />
+    <Property Name="Line_3" Type="String" Nullable="false" MaxLength="74" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Monster">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="29" Unicode="true" FixedLength="false" />
+    <Property Name="Group" Type="Int32" Nullable="false" />
+    <Property Name="Index" Type="Int32" Nullable="false" />
+    <Property Name="Weapon_Number" Type="Int32" Nullable="false" />
+    <Property Name="AC" Type="Int32" Nullable="false" />
+    <Property Name="DR" Type="Int32" Nullable="false" />
+    <Property Name="Follow" Type="Int32" Nullable="false" />
+    <Property Name="MR" Type="Int32" Nullable="false" />
+    <Property Name="Experience" Type="Double" Nullable="false" />
+    <Property Name="Hit_Points" Type="Int32" Nullable="false" />
+    <Property Name="HP_Regen" Type="Int32" Nullable="false" />
+    <Property Name="Energy" Type="Int32" Nullable="false" />
+    <Property Name="Game_Limit" Type="Int32" Nullable="false" />
+    <Property Name="Charm_LvL" Type="Int32" Nullable="false" />
+    <Property Name="Charm_RES" Type="Int32" Nullable="false" />
+    <Property Name="BS_Defense" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Undead" Type="Int32" Nullable="false" />
+    <Property Name="Alignment" Type="Int32" Nullable="false" />
+    <Property Name="Gender" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time" Type="Int32" Nullable="false" />
+    <Property Name="Date_Killed" Type="Int32" Nullable="false" />
+    <Property Name="Time_Killed" Type="Int32" Nullable="false" />
+    <Property Name="Runic" Type="Int32" Nullable="false" />
+    <Property Name="Platinum" Type="Int32" Nullable="false" />
+    <Property Name="Gold" Type="Int32" Nullable="false" />
+    <Property Name="Silver" Type="Int32" Nullable="false" />
+    <Property Name="Copper" Type="Int32" Nullable="false" />
+    <Property Name="Move_Msg" Type="Int32" Nullable="false" />
+    <Property Name="Death_Msg" Type="Int32" Nullable="false" />
+    <Property Name="Greet_Txt" Type="Int32" Nullable="false" />
+    <Property Name="Desc_Txt" Type="Int32" Nullable="false" />
+    <Property Name="Talk_Txt" Type="Int32" Nullable="false" />
+    <Property Name="Death_Spell" Type="Int32" Nullable="false" />
+    <Property Name="Create_Spell" Type="Int32" Nullable="false" />
+    <Property Name="Desc_1" Type="String" Nullable="false" MaxLength="70" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_2" Type="String" Nullable="false" MaxLength="70" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_3" Type="String" Nullable="false" MaxLength="70" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_4" Type="String" Nullable="false" MaxLength="70" Unicode="true" FixedLength="false" />
+    <Property Name="Attack_Type_0" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Accu_Spell_0" Type="Int32" Nullable="false" />
+    <Property Name="Attack___0" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Min_Hit_Cast___0" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Max_Hit_Cast_LVL_0" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Hit_Msg_0" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Dodge_Msg_0" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Miss_Msg_0" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Energy_0" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Hit_Spell_0" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Number_0" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Cast___0" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Cast_LVL_0" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Type_1" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Accu_Spell_1" Type="Int32" Nullable="false" />
+    <Property Name="Attack___1" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Min_Hit_Cast___1" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Max_Hit_Cast_LVL_1" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Hit_Msg_1" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Dodge_Msg_1" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Miss_Msg_1" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Energy_1" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Hit_Spell_1" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Number_1" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Cast___1" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Cast_LVL_1" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Type_2" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Accu_Spell_2" Type="Int32" Nullable="false" />
+    <Property Name="Attack___2" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Min_Hit_Cast___2" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Max_Hit_Cast_LVL_2" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Hit_Msg_2" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Dodge_Msg_2" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Miss_Msg_2" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Energy_2" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Hit_Spell_2" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Number_2" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Cast___2" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Cast_LVL_2" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Type_3" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Accu_Spell_3" Type="Int32" Nullable="false" />
+    <Property Name="Attack___3" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Min_Hit_Cast___3" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Max_Hit_Cast_LVL_3" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Hit_Msg_3" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Dodge_Msg_3" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Miss_Msg_3" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Energy_3" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Hit_Spell_3" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Number_3" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Cast___3" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Cast_LVL_3" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Type_4" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Accu_Spell_4" Type="Int32" Nullable="false" />
+    <Property Name="Attack___4" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Min_Hit_Cast___4" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Max_Hit_Cast_LVL_4" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Hit_Msg_4" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Dodge_Msg_4" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Miss_Msg_4" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Energy_4" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Hit_Spell_4" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Number_4" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Cast___4" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Cast_LVL_4" Type="Int32" Nullable="false" />
+    <Property Name="Item_Number_0" Type="Int32" Nullable="false" />
+    <Property Name="Item_Uses_0" Type="Int32" Nullable="false" />
+    <Property Name="Item_Drop___0" Type="Int32" Nullable="false" />
+    <Property Name="Item_Number_1" Type="Int32" Nullable="false" />
+    <Property Name="Item_Uses_1" Type="Int32" Nullable="false" />
+    <Property Name="Item_Drop___1" Type="Int32" Nullable="false" />
+    <Property Name="Item_Number_2" Type="Int32" Nullable="false" />
+    <Property Name="Item_Uses_2" Type="Int32" Nullable="false" />
+    <Property Name="Item_Drop___2" Type="Int32" Nullable="false" />
+    <Property Name="Item_Number_3" Type="Int32" Nullable="false" />
+    <Property Name="Item_Uses_3" Type="Int32" Nullable="false" />
+    <Property Name="Item_Drop___3" Type="Int32" Nullable="false" />
+    <Property Name="Item_Number_4" Type="Int32" Nullable="false" />
+    <Property Name="Item_Uses_4" Type="Int32" Nullable="false" />
+    <Property Name="Item_Drop___4" Type="Int32" Nullable="false" />
+    <Property Name="Item_Number_5" Type="Int32" Nullable="false" />
+    <Property Name="Item_Uses_5" Type="Int32" Nullable="false" />
+    <Property Name="Item_Drop___5" Type="Int32" Nullable="false" />
+    <Property Name="Item_Number_6" Type="Int32" Nullable="false" />
+    <Property Name="Item_Uses_6" Type="Int32" Nullable="false" />
+    <Property Name="Item_Drop___6" Type="Int32" Nullable="false" />
+    <Property Name="Item_Number_7" Type="Int32" Nullable="false" />
+    <Property Name="Item_Uses_7" Type="Int32" Nullable="false" />
+    <Property Name="Item_Drop___7" Type="Int32" Nullable="false" />
+    <Property Name="Item_Number_8" Type="Int32" Nullable="false" />
+    <Property Name="Item_Uses_8" Type="Int32" Nullable="false" />
+    <Property Name="Item_Drop___8" Type="Int32" Nullable="false" />
+    <Property Name="Item_Number_9" Type="Int32" Nullable="false" />
+    <Property Name="Item_Uses_9" Type="Int32" Nullable="false" />
+    <Property Name="Item_Drop___9" Type="Int32" Nullable="false" />
+    <Property Name="Ability_0" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_0" Type="Int32" Nullable="false" />
+    <Property Name="Ability_1" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_1" Type="Int32" Nullable="false" />
+    <Property Name="Ability_2" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_2" Type="Int32" Nullable="false" />
+    <Property Name="Ability_3" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_3" Type="Int32" Nullable="false" />
+    <Property Name="Ability_4" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_4" Type="Int32" Nullable="false" />
+    <Property Name="Ability_5" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_5" Type="Int32" Nullable="false" />
+    <Property Name="Ability_6" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_6" Type="Int32" Nullable="false" />
+    <Property Name="Ability_7" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_7" Type="Int32" Nullable="false" />
+    <Property Name="Ability_8" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_8" Type="Int32" Nullable="false" />
+    <Property Name="Ability_9" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_9" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Race">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="29" Unicode="true" FixedLength="false" />
+    <Property Name="Min_INT" Type="Int32" Nullable="false" />
+    <Property Name="Min_WIL" Type="Int32" Nullable="false" />
+    <Property Name="Min_STR" Type="Int32" Nullable="false" />
+    <Property Name="Min_HEA" Type="Int32" Nullable="false" />
+    <Property Name="Min_AGL" Type="Int32" Nullable="false" />
+    <Property Name="Min_CHM" Type="Int32" Nullable="false" />
+    <Property Name="Max_INT" Type="Int32" Nullable="false" />
+    <Property Name="Max_WIL" Type="Int32" Nullable="false" />
+    <Property Name="Max_STR" Type="Int32" Nullable="false" />
+    <Property Name="Max_HEA" Type="Int32" Nullable="false" />
+    <Property Name="Max_AGL" Type="Int32" Nullable="false" />
+    <Property Name="Max_CHM" Type="Int32" Nullable="false" />
+    <Property Name="HP_Bonus" Type="Int32" Nullable="false" />
+    <Property Name="CP" Type="Int32" Nullable="false" />
+    <Property Name="EXP__" Type="Int32" Nullable="false" />
+    <Property Name="Ability_0" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_0" Type="Int32" Nullable="false" />
+    <Property Name="Ability_1" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_1" Type="Int32" Nullable="false" />
+    <Property Name="Ability_2" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_2" Type="Int32" Nullable="false" />
+    <Property Name="Ability_3" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_3" Type="Int32" Nullable="false" />
+    <Property Name="Ability_4" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_4" Type="Int32" Nullable="false" />
+    <Property Name="Ability_5" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_5" Type="Int32" Nullable="false" />
+    <Property Name="Ability_6" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_6" Type="Int32" Nullable="false" />
+    <Property Name="Ability_7" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_7" Type="Int32" Nullable="false" />
+    <Property Name="Ability_8" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_8" Type="Int32" Nullable="false" />
+    <Property Name="Ability_9" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_9" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="Map_Number" />
+      <PropertyRef Name="Room_Number" />
+    </Key>
+    <Property Name="Map_Number" Type="Int32" Nullable="false" />
+    <Property Name="Room_Number" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="53" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_0" Type="String" Nullable="false" MaxLength="71" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_1" Type="String" Nullable="false" MaxLength="71" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_2" Type="String" Nullable="false" MaxLength="71" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_3" Type="String" Nullable="false" MaxLength="71" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_4" Type="String" Nullable="false" MaxLength="71" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_5" Type="String" Nullable="false" MaxLength="71" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_6" Type="String" Nullable="false" MaxLength="71" Unicode="true" FixedLength="false" />
+    <Property Name="AnsiMap" Type="String" Nullable="false" MaxLength="13" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Shop_Number" Type="Int32" Nullable="false" />
+    <Property Name="Gang_House_Number" Type="Int32" Nullable="false" />
+    <Property Name="Mon_Type" Type="Int32" Nullable="false" />
+    <Property Name="Min_Index" Type="Int32" Nullable="false" />
+    <Property Name="Max_Index" Type="Int32" Nullable="false" />
+    <Property Name="Max_Regen" Type="Int32" Nullable="false" />
+    <Property Name="Max_Area" Type="Int32" Nullable="false" />
+    <Property Name="Control_Room" Type="Int32" Nullable="false" />
+    <Property Name="Light" Type="Int32" Nullable="false" />
+    <Property Name="Attributes" Type="Int32" Nullable="false" />
+    <Property Name="Death_Room" Type="Int32" Nullable="false" />
+    <Property Name="Exit_Room" Type="Int32" Nullable="false" />
+    <Property Name="Command_Text" Type="Int32" Nullable="false" />
+    <Property Name="Delay" Type="Int32" Nullable="false" />
+    <Property Name="Perm_NPC" Type="Int32" Nullable="false" />
+    <Property Name="Spell" Type="Int32" Nullable="false" />
+    <Property Name="Exit_0" Type="Int32" Nullable="false" />
+    <Property Name="Type_0" Type="Int32" Nullable="false" />
+    <Property Name="Para1_0" Type="Int32" Nullable="false" />
+    <Property Name="Para2_0" Type="Int32" Nullable="false" />
+    <Property Name="Para3_0" Type="Int32" Nullable="false" />
+    <Property Name="Para4_0" Type="Int32" Nullable="false" />
+    <Property Name="Exit_1" Type="Int32" Nullable="false" />
+    <Property Name="Type_1" Type="Int32" Nullable="false" />
+    <Property Name="Para1_1" Type="Int32" Nullable="false" />
+    <Property Name="Para2_1" Type="Int32" Nullable="false" />
+    <Property Name="Para3_1" Type="Int32" Nullable="false" />
+    <Property Name="Para4_1" Type="Int32" Nullable="false" />
+    <Property Name="Exit_2" Type="Int32" Nullable="false" />
+    <Property Name="Type_2" Type="Int32" Nullable="false" />
+    <Property Name="Para1_2" Type="Int32" Nullable="false" />
+    <Property Name="Para2_2" Type="Int32" Nullable="false" />
+    <Property Name="Para3_2" Type="Int32" Nullable="false" />
+    <Property Name="Para4_2" Type="Int32" Nullable="false" />
+    <Property Name="Exit_3" Type="Int32" Nullable="false" />
+    <Property Name="Type_3" Type="Int32" Nullable="false" />
+    <Property Name="Para1_3" Type="Int32" Nullable="false" />
+    <Property Name="Para2_3" Type="Int32" Nullable="false" />
+    <Property Name="Para3_3" Type="Int32" Nullable="false" />
+    <Property Name="Para4_3" Type="Int32" Nullable="false" />
+    <Property Name="Exit_4" Type="Int32" Nullable="false" />
+    <Property Name="Type_4" Type="Int32" Nullable="false" />
+    <Property Name="Para1_4" Type="Int32" Nullable="false" />
+    <Property Name="Para2_4" Type="Int32" Nullable="false" />
+    <Property Name="Para3_4" Type="Int32" Nullable="false" />
+    <Property Name="Para4_4" Type="Int32" Nullable="false" />
+    <Property Name="Exit_5" Type="Int32" Nullable="false" />
+    <Property Name="Type_5" Type="Int32" Nullable="false" />
+    <Property Name="Para1_5" Type="Int32" Nullable="false" />
+    <Property Name="Para2_5" Type="Int32" Nullable="false" />
+    <Property Name="Para3_5" Type="Int32" Nullable="false" />
+    <Property Name="Para4_5" Type="Int32" Nullable="false" />
+    <Property Name="Exit_6" Type="Int32" Nullable="false" />
+    <Property Name="Type_6" Type="Int32" Nullable="false" />
+    <Property Name="Para1_6" Type="Int32" Nullable="false" />
+    <Property Name="Para2_6" Type="Int32" Nullable="false" />
+    <Property Name="Para3_6" Type="Int32" Nullable="false" />
+    <Property Name="Para4_6" Type="Int32" Nullable="false" />
+    <Property Name="Exit_7" Type="Int32" Nullable="false" />
+    <Property Name="Type_7" Type="Int32" Nullable="false" />
+    <Property Name="Para1_7" Type="Int32" Nullable="false" />
+    <Property Name="Para2_7" Type="Int32" Nullable="false" />
+    <Property Name="Para3_7" Type="Int32" Nullable="false" />
+    <Property Name="Para4_7" Type="Int32" Nullable="false" />
+    <Property Name="Exit_8" Type="Int32" Nullable="false" />
+    <Property Name="Type_8" Type="Int32" Nullable="false" />
+    <Property Name="Para1_8" Type="Int32" Nullable="false" />
+    <Property Name="Para2_8" Type="Int32" Nullable="false" />
+    <Property Name="Para3_8" Type="Int32" Nullable="false" />
+    <Property Name="Para4_8" Type="Int32" Nullable="false" />
+    <Property Name="Exit_9" Type="Int32" Nullable="false" />
+    <Property Name="Type_9" Type="Int32" Nullable="false" />
+    <Property Name="Para1_9" Type="Int32" Nullable="false" />
+    <Property Name="Para2_9" Type="Int32" Nullable="false" />
+    <Property Name="Para3_9" Type="Int32" Nullable="false" />
+    <Property Name="Para4_9" Type="Int32" Nullable="false" />
+    <Property Name="Placed_Item_0" Type="Int32" Nullable="false" />
+    <Property Name="Placed_Item_1" Type="Int32" Nullable="false" />
+    <Property Name="Placed_Item_2" Type="Int32" Nullable="false" />
+    <Property Name="Placed_Item_3" Type="Int32" Nullable="false" />
+    <Property Name="Placed_Item_4" Type="Int32" Nullable="false" />
+    <Property Name="Placed_Item_5" Type="Int32" Nullable="false" />
+    <Property Name="Placed_Item_6" Type="Int32" Nullable="false" />
+    <Property Name="Placed_Item_7" Type="Int32" Nullable="false" />
+    <Property Name="Placed_Item_8" Type="Int32" Nullable="false" />
+    <Property Name="Placed_Item_9" Type="Int32" Nullable="false" />
+    <Property Name="X" Type="Int32" />
+    <Property Name="Y" Type="Int32" />
+    <Property Name="Z" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Value" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Shop">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="39" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_A" Type="String" Nullable="false" MaxLength="52" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_B" Type="String" Nullable="false" MaxLength="52" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_C" Type="String" Nullable="false" MaxLength="52" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Min_Lvl" Type="Int32" Nullable="false" />
+    <Property Name="Max_Lvl" Type="Int32" Nullable="false" />
+    <Property Name="MarkUp" Type="Int32" Nullable="false" />
+    <Property Name="Class_Limit" Type="Int32" Nullable="false" />
+    <Property Name="Item_0" Type="Int32" Nullable="false" />
+    <Property Name="Max_0" Type="Int32" Nullable="false" />
+    <Property Name="Normal_0" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_0" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number0" Type="Int32" Nullable="false" />
+    <Property Name="Regen__0" Type="Int32" Nullable="false" />
+    <Property Name="Item_1" Type="Int32" Nullable="false" />
+    <Property Name="Max_1" Type="Int32" Nullable="false" />
+    <Property Name="Normal_1" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_1" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number1" Type="Int32" Nullable="false" />
+    <Property Name="Regen__1" Type="Int32" Nullable="false" />
+    <Property Name="Item_2" Type="Int32" Nullable="false" />
+    <Property Name="Max_2" Type="Int32" Nullable="false" />
+    <Property Name="Normal_2" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_2" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number2" Type="Int32" Nullable="false" />
+    <Property Name="Regen__2" Type="Int32" Nullable="false" />
+    <Property Name="Item_3" Type="Int32" Nullable="false" />
+    <Property Name="Max_3" Type="Int32" Nullable="false" />
+    <Property Name="Normal_3" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_3" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number3" Type="Int32" Nullable="false" />
+    <Property Name="Regen__3" Type="Int32" Nullable="false" />
+    <Property Name="Item_4" Type="Int32" Nullable="false" />
+    <Property Name="Max_4" Type="Int32" Nullable="false" />
+    <Property Name="Normal_4" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_4" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number4" Type="Int32" Nullable="false" />
+    <Property Name="Regen__4" Type="Int32" Nullable="false" />
+    <Property Name="Item_5" Type="Int32" Nullable="false" />
+    <Property Name="Max_5" Type="Int32" Nullable="false" />
+    <Property Name="Normal_5" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_5" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number5" Type="Int32" Nullable="false" />
+    <Property Name="Regen__5" Type="Int32" Nullable="false" />
+    <Property Name="Item_6" Type="Int32" Nullable="false" />
+    <Property Name="Max_6" Type="Int32" Nullable="false" />
+    <Property Name="Normal_6" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_6" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number6" Type="Int32" Nullable="false" />
+    <Property Name="Regen__6" Type="Int32" Nullable="false" />
+    <Property Name="Item_7" Type="Int32" Nullable="false" />
+    <Property Name="Max_7" Type="Int32" Nullable="false" />
+    <Property Name="Normal_7" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_7" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number7" Type="Int32" Nullable="false" />
+    <Property Name="Regen__7" Type="Int32" Nullable="false" />
+    <Property Name="Item_8" Type="Int32" Nullable="false" />
+    <Property Name="Max_8" Type="Int32" Nullable="false" />
+    <Property Name="Normal_8" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_8" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number8" Type="Int32" Nullable="false" />
+    <Property Name="Regen__8" Type="Int32" Nullable="false" />
+    <Property Name="Item_9" Type="Int32" Nullable="false" />
+    <Property Name="Max_9" Type="Int32" Nullable="false" />
+    <Property Name="Normal_9" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_9" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number9" Type="Int32" Nullable="false" />
+    <Property Name="Regen__9" Type="Int32" Nullable="false" />
+    <Property Name="Item_10" Type="Int32" Nullable="false" />
+    <Property Name="Max_10" Type="Int32" Nullable="false" />
+    <Property Name="Normal_10" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_10" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number10" Type="Int32" Nullable="false" />
+    <Property Name="Regen__10" Type="Int32" Nullable="false" />
+    <Property Name="Item_11" Type="Int32" Nullable="false" />
+    <Property Name="Max_11" Type="Int32" Nullable="false" />
+    <Property Name="Normal_11" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_11" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number11" Type="Int32" Nullable="false" />
+    <Property Name="Regen__11" Type="Int32" Nullable="false" />
+    <Property Name="Item_12" Type="Int32" Nullable="false" />
+    <Property Name="Max_12" Type="Int32" Nullable="false" />
+    <Property Name="Normal_12" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_12" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number12" Type="Int32" Nullable="false" />
+    <Property Name="Regen__12" Type="Int32" Nullable="false" />
+    <Property Name="Item_13" Type="Int32" Nullable="false" />
+    <Property Name="Max_13" Type="Int32" Nullable="false" />
+    <Property Name="Normal_13" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_13" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number13" Type="Int32" Nullable="false" />
+    <Property Name="Regen__13" Type="Int32" Nullable="false" />
+    <Property Name="Item_14" Type="Int32" Nullable="false" />
+    <Property Name="Max_14" Type="Int32" Nullable="false" />
+    <Property Name="Normal_14" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_14" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number14" Type="Int32" Nullable="false" />
+    <Property Name="Regen__14" Type="Int32" Nullable="false" />
+    <Property Name="Item_15" Type="Int32" Nullable="false" />
+    <Property Name="Max_15" Type="Int32" Nullable="false" />
+    <Property Name="Normal_15" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_15" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number15" Type="Int32" Nullable="false" />
+    <Property Name="Regen__15" Type="Int32" Nullable="false" />
+    <Property Name="Item_16" Type="Int32" Nullable="false" />
+    <Property Name="Max_16" Type="Int32" Nullable="false" />
+    <Property Name="Normal_16" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_16" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number16" Type="Int32" Nullable="false" />
+    <Property Name="Regen__16" Type="Int32" Nullable="false" />
+    <Property Name="Item_17" Type="Int32" Nullable="false" />
+    <Property Name="Max_17" Type="Int32" Nullable="false" />
+    <Property Name="Normal_17" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_17" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number17" Type="Int32" Nullable="false" />
+    <Property Name="Regen__17" Type="Int32" Nullable="false" />
+    <Property Name="Item_18" Type="Int32" Nullable="false" />
+    <Property Name="Max_18" Type="Int32" Nullable="false" />
+    <Property Name="Normal_18" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_18" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number18" Type="Int32" Nullable="false" />
+    <Property Name="Regen__18" Type="Int32" Nullable="false" />
+    <Property Name="Item_19" Type="Int32" Nullable="false" />
+    <Property Name="Max_19" Type="Int32" Nullable="false" />
+    <Property Name="Normal_19" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Time_19" Type="Int32" Nullable="false" />
+    <Property Name="Regen_Number19" Type="Int32" Nullable="false" />
+    <Property Name="Regen__19" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Spell">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="29" Unicode="true" FixedLength="false" />
+    <Property Name="Short_Name" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="Level" Type="Int32" Nullable="false" />
+    <Property Name="Desc_1" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Desc_2" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Cast_MSG_A" Type="Int32" Nullable="false" />
+    <Property Name="Cast_MSG_B" Type="Int32" Nullable="false" />
+    <Property Name="MSG_Style" Type="Int32" Nullable="false" />
+    <Property Name="Energy" Type="Int32" Nullable="false" />
+    <Property Name="Mana" Type="Int32" Nullable="false" />
+    <Property Name="Min" Type="Int32" Nullable="false" />
+    <Property Name="Max" Type="Int32" Nullable="false" />
+    <Property Name="Spell_Type" Type="Int32" Nullable="false" />
+    <Property Name="Type_of_Resists" Type="Int32" Nullable="false" />
+    <Property Name="Difficulty" Type="Int32" Nullable="false" />
+    <Property Name="Target" Type="Int32" Nullable="false" />
+    <Property Name="Duration" Type="Int32" Nullable="false" />
+    <Property Name="Attack_Type" Type="Int32" Nullable="false" />
+    <Property Name="Resist_Ability" Type="Int32" Nullable="false" />
+    <Property Name="Magery_A" Type="Int32" Nullable="false" />
+    <Property Name="Magery_B" Type="Int32" Nullable="false" />
+    <Property Name="Level_Cap" Type="Int32" Nullable="false" />
+    <Property Name="LVLS_Max_Increase" Type="Int32" Nullable="false" />
+    <Property Name="Max_Increase" Type="Int32" Nullable="false" />
+    <Property Name="LVLS_Min_Increase" Type="Int32" Nullable="false" />
+    <Property Name="Min_Increase" Type="Int32" Nullable="false" />
+    <Property Name="LVLS_Dur_Increase" Type="Int32" Nullable="false" />
+    <Property Name="Dur_Increase" Type="Int32" Nullable="false" />
+    <Property Name="UNDEFINED01" Type="Int32" Nullable="false" />
+    <Property Name="UNDEFINED02" Type="Int32" Nullable="false" />
+    <Property Name="Ability_0" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_0" Type="Int32" Nullable="false" />
+    <Property Name="Ability_1" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_1" Type="Int32" Nullable="false" />
+    <Property Name="Ability_2" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_2" Type="Int32" Nullable="false" />
+    <Property Name="Ability_3" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_3" Type="Int32" Nullable="false" />
+    <Property Name="Ability_4" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_4" Type="Int32" Nullable="false" />
+    <Property Name="Ability_5" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_5" Type="Int32" Nullable="false" />
+    <Property Name="Ability_6" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_6" Type="Int32" Nullable="false" />
+    <Property Name="Ability_7" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_7" Type="Int32" Nullable="false" />
+    <Property Name="Ability_8" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_8" Type="Int32" Nullable="false" />
+    <Property Name="Ability_9" Type="Int32" Nullable="false" />
+    <Property Name="Ability_Value_9" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>
+</edmx:ConceptualModels>
+<edmx:Mappings>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MajorModelModelStoreContainer" CdmEntityContainer="MajorModelEntities">
+    <EntitySetMapping Name="Classes">
+      <EntityTypeMapping TypeName="MajorModelModel.Class">
+        <MappingFragment StoreEntitySet="Classes">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Min_HP" ColumnName="Min HP" />
+          <ScalarProperty Name="Max_HP" ColumnName="Max HP" />
+          <ScalarProperty Name="EXP__" ColumnName="EXP %" />
+          <ScalarProperty Name="Magic_Type" ColumnName="Magic Type" />
+          <ScalarProperty Name="Magic_LVL" ColumnName="Magic LVL" />
+          <ScalarProperty Name="Weapon" ColumnName="Weapon" />
+          <ScalarProperty Name="Armour" ColumnName="Armour" />
+          <ScalarProperty Name="Combat" ColumnName="Combat" />
+          <ScalarProperty Name="Title_Text" ColumnName="Title Text" />
+          <ScalarProperty Name="Ability_0" ColumnName="Ability 0" />
+          <ScalarProperty Name="Ability_Value_0" ColumnName="Ability Value 0" />
+          <ScalarProperty Name="Ability_1" ColumnName="Ability 1" />
+          <ScalarProperty Name="Ability_Value_1" ColumnName="Ability Value 1" />
+          <ScalarProperty Name="Ability_2" ColumnName="Ability 2" />
+          <ScalarProperty Name="Ability_Value_2" ColumnName="Ability Value 2" />
+          <ScalarProperty Name="Ability_3" ColumnName="Ability 3" />
+          <ScalarProperty Name="Ability_Value_3" ColumnName="Ability Value 3" />
+          <ScalarProperty Name="Ability_4" ColumnName="Ability 4" />
+          <ScalarProperty Name="Ability_Value_4" ColumnName="Ability Value 4" />
+          <ScalarProperty Name="Ability_5" ColumnName="Ability 5" />
+          <ScalarProperty Name="Ability_Value_5" ColumnName="Ability Value 5" />
+          <ScalarProperty Name="Ability_6" ColumnName="Ability 6" />
+          <ScalarProperty Name="Ability_Value_6" ColumnName="Ability Value 6" />
+          <ScalarProperty Name="Ability_7" ColumnName="Ability 7" />
+          <ScalarProperty Name="Ability_Value_7" ColumnName="Ability Value 7" />
+          <ScalarProperty Name="Ability_8" ColumnName="Ability 8" />
+          <ScalarProperty Name="Ability_Value_8" ColumnName="Ability Value 8" />
+          <ScalarProperty Name="Ability_9" ColumnName="Ability 9" />
+          <ScalarProperty Name="Ability_Value_9" ColumnName="Ability Value 9" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="MajorModelModel.Item">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Game_Limit" ColumnName="Game Limit" />
+          <ScalarProperty Name="Desc1" ColumnName="Desc1" />
+          <ScalarProperty Name="Desc2" ColumnName="Desc2" />
+          <ScalarProperty Name="Desc3" ColumnName="Desc3" />
+          <ScalarProperty Name="Desc4" ColumnName="Desc4" />
+          <ScalarProperty Name="Desc5" ColumnName="Desc5" />
+          <ScalarProperty Name="Desc6" ColumnName="Desc6" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Uses" ColumnName="Uses" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Cost_Type" ColumnName="Cost Type" />
+          <ScalarProperty Name="Min_Hit" ColumnName="Min Hit" />
+          <ScalarProperty Name="Max_Hit" ColumnName="Max Hit" />
+          <ScalarProperty Name="AC" ColumnName="AC" />
+          <ScalarProperty Name="DR" ColumnName="DR" />
+          <ScalarProperty Name="Weapon" ColumnName="Weapon" />
+          <ScalarProperty Name="Armour" ColumnName="Armour" />
+          <ScalarProperty Name="Worn_On" ColumnName="Worn On" />
+          <ScalarProperty Name="Accuracy" ColumnName="Accuracy" />
+          <ScalarProperty Name="Gettable" ColumnName="Gettable" />
+          <ScalarProperty Name="Req_Str" ColumnName="Req Str" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="Robable" ColumnName="Robable" />
+          <ScalarProperty Name="Hit_Msg" ColumnName="Hit Msg" />
+          <ScalarProperty Name="Miss_Msg" ColumnName="Miss Msg" />
+          <ScalarProperty Name="Read_Msg" ColumnName="Read Msg" />
+          <ScalarProperty Name="Distruct_Msg" ColumnName="Distruct Msg" />
+          <ScalarProperty Name="Not_Droppable" ColumnName="Not Droppable" />
+          <ScalarProperty Name="Destroy_On_Death" ColumnName="Destroy On Death" />
+          <ScalarProperty Name="Retain_After_Uses" ColumnName="Retain After Uses" />
+          <ScalarProperty Name="OpenRunic" ColumnName="OpenRunic" />
+          <ScalarProperty Name="OpenPlatinum" ColumnName="OpenPlatinum" />
+          <ScalarProperty Name="OpenGold" ColumnName="OpenGold" />
+          <ScalarProperty Name="OpenSilver" ColumnName="OpenSilver" />
+          <ScalarProperty Name="OpenCopper" ColumnName="OpenCopper" />
+          <ScalarProperty Name="Class_0" ColumnName="Class 0" />
+          <ScalarProperty Name="Class_1" ColumnName="Class 1" />
+          <ScalarProperty Name="Class_2" ColumnName="Class 2" />
+          <ScalarProperty Name="Class_3" ColumnName="Class 3" />
+          <ScalarProperty Name="Class_4" ColumnName="Class 4" />
+          <ScalarProperty Name="Class_5" ColumnName="Class 5" />
+          <ScalarProperty Name="Class_6" ColumnName="Class 6" />
+          <ScalarProperty Name="Class_7" ColumnName="Class 7" />
+          <ScalarProperty Name="Class_8" ColumnName="Class 8" />
+          <ScalarProperty Name="Class_9" ColumnName="Class 9" />
+          <ScalarProperty Name="Race_0" ColumnName="Race 0" />
+          <ScalarProperty Name="Race_1" ColumnName="Race 1" />
+          <ScalarProperty Name="Race_2" ColumnName="Race 2" />
+          <ScalarProperty Name="Race_3" ColumnName="Race 3" />
+          <ScalarProperty Name="Race_4" ColumnName="Race 4" />
+          <ScalarProperty Name="Race_5" ColumnName="Race 5" />
+          <ScalarProperty Name="Race_6" ColumnName="Race 6" />
+          <ScalarProperty Name="Race_7" ColumnName="Race 7" />
+          <ScalarProperty Name="Race_8" ColumnName="Race 8" />
+          <ScalarProperty Name="Race_9" ColumnName="Race 9" />
+          <ScalarProperty Name="Negate_0" ColumnName="Negate 0" />
+          <ScalarProperty Name="Negate_1" ColumnName="Negate 1" />
+          <ScalarProperty Name="Negate_2" ColumnName="Negate 2" />
+          <ScalarProperty Name="Negate_3" ColumnName="Negate 3" />
+          <ScalarProperty Name="Negate_4" ColumnName="Negate 4" />
+          <ScalarProperty Name="Negate_5" ColumnName="Negate 5" />
+          <ScalarProperty Name="Negate_6" ColumnName="Negate 6" />
+          <ScalarProperty Name="Negate_7" ColumnName="Negate 7" />
+          <ScalarProperty Name="Negate_8" ColumnName="Negate 8" />
+          <ScalarProperty Name="Negate_9" ColumnName="Negate 9" />
+          <ScalarProperty Name="Ability_0" ColumnName="Ability 0" />
+          <ScalarProperty Name="Ability_Value_0" ColumnName="Ability Value 0" />
+          <ScalarProperty Name="Ability_1" ColumnName="Ability 1" />
+          <ScalarProperty Name="Ability_Value_1" ColumnName="Ability Value 1" />
+          <ScalarProperty Name="Ability_2" ColumnName="Ability 2" />
+          <ScalarProperty Name="Ability_Value_2" ColumnName="Ability Value 2" />
+          <ScalarProperty Name="Ability_3" ColumnName="Ability 3" />
+          <ScalarProperty Name="Ability_Value_3" ColumnName="Ability Value 3" />
+          <ScalarProperty Name="Ability_4" ColumnName="Ability 4" />
+          <ScalarProperty Name="Ability_Value_4" ColumnName="Ability Value 4" />
+          <ScalarProperty Name="Ability_5" ColumnName="Ability 5" />
+          <ScalarProperty Name="Ability_Value_5" ColumnName="Ability Value 5" />
+          <ScalarProperty Name="Ability_6" ColumnName="Ability 6" />
+          <ScalarProperty Name="Ability_Value_6" ColumnName="Ability Value 6" />
+          <ScalarProperty Name="Ability_7" ColumnName="Ability 7" />
+          <ScalarProperty Name="Ability_Value_7" ColumnName="Ability Value 7" />
+          <ScalarProperty Name="Ability_8" ColumnName="Ability 8" />
+          <ScalarProperty Name="Ability_Value_8" ColumnName="Ability Value 8" />
+          <ScalarProperty Name="Ability_9" ColumnName="Ability 9" />
+          <ScalarProperty Name="Ability_Value_9" ColumnName="Ability Value 9" />
+          <ScalarProperty Name="Ability_10" ColumnName="Ability 10" />
+          <ScalarProperty Name="Ability_Value_10" ColumnName="Ability Value 10" />
+          <ScalarProperty Name="Ability_11" ColumnName="Ability 11" />
+          <ScalarProperty Name="Ability_Value_11" ColumnName="Ability Value 11" />
+          <ScalarProperty Name="Ability_12" ColumnName="Ability 12" />
+          <ScalarProperty Name="Ability_Value_12" ColumnName="Ability Value 12" />
+          <ScalarProperty Name="Ability_13" ColumnName="Ability 13" />
+          <ScalarProperty Name="Ability_Value_13" ColumnName="Ability Value 13" />
+          <ScalarProperty Name="Ability_14" ColumnName="Ability 14" />
+          <ScalarProperty Name="Ability_Value_14" ColumnName="Ability Value 14" />
+          <ScalarProperty Name="Ability_15" ColumnName="Ability 15" />
+          <ScalarProperty Name="Ability_Value_15" ColumnName="Ability Value 15" />
+          <ScalarProperty Name="Ability_16" ColumnName="Ability 16" />
+          <ScalarProperty Name="Ability_Value_16" ColumnName="Ability Value 16" />
+          <ScalarProperty Name="Ability_17" ColumnName="Ability 17" />
+          <ScalarProperty Name="Ability_Value_17" ColumnName="Ability Value 17" />
+          <ScalarProperty Name="Ability_18" ColumnName="Ability 18" />
+          <ScalarProperty Name="Ability_Value_18" ColumnName="Ability Value 18" />
+          <ScalarProperty Name="Ability_19" ColumnName="Ability 19" />
+          <ScalarProperty Name="Ability_Value_19" ColumnName="Ability Value 19" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="MajorModelModel.Message">
+        <MappingFragment StoreEntitySet="Messages">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Line_1" ColumnName="Line 1" />
+          <ScalarProperty Name="Line_2" ColumnName="Line 2" />
+          <ScalarProperty Name="Line_3" ColumnName="Line 3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monsters">
+      <EntityTypeMapping TypeName="MajorModelModel.Monster">
+        <MappingFragment StoreEntitySet="Monsters">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="Index" ColumnName="Index" />
+          <ScalarProperty Name="Weapon_Number" ColumnName="Weapon Number" />
+          <ScalarProperty Name="AC" ColumnName="AC" />
+          <ScalarProperty Name="DR" ColumnName="DR" />
+          <ScalarProperty Name="Follow" ColumnName="Follow" />
+          <ScalarProperty Name="MR" ColumnName="MR" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="Hit_Points" ColumnName="Hit Points" />
+          <ScalarProperty Name="HP_Regen" ColumnName="HP Regen" />
+          <ScalarProperty Name="Energy" ColumnName="Energy" />
+          <ScalarProperty Name="Game_Limit" ColumnName="Game Limit" />
+          <ScalarProperty Name="Charm_LvL" ColumnName="Charm LvL" />
+          <ScalarProperty Name="Charm_RES" ColumnName="Charm RES" />
+          <ScalarProperty Name="BS_Defense" ColumnName="BS Defense" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Undead" ColumnName="Undead" />
+          <ScalarProperty Name="Alignment" ColumnName="Alignment" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Regen_Time" ColumnName="Regen Time" />
+          <ScalarProperty Name="Date_Killed" ColumnName="Date Killed" />
+          <ScalarProperty Name="Time_Killed" ColumnName="Time Killed" />
+          <ScalarProperty Name="Runic" ColumnName="Runic" />
+          <ScalarProperty Name="Platinum" ColumnName="Platinum" />
+          <ScalarProperty Name="Gold" ColumnName="Gold" />
+          <ScalarProperty Name="Silver" ColumnName="Silver" />
+          <ScalarProperty Name="Copper" ColumnName="Copper" />
+          <ScalarProperty Name="Move_Msg" ColumnName="Move Msg" />
+          <ScalarProperty Name="Death_Msg" ColumnName="Death Msg" />
+          <ScalarProperty Name="Greet_Txt" ColumnName="Greet Txt" />
+          <ScalarProperty Name="Desc_Txt" ColumnName="Desc Txt" />
+          <ScalarProperty Name="Talk_Txt" ColumnName="Talk Txt" />
+          <ScalarProperty Name="Death_Spell" ColumnName="Death Spell" />
+          <ScalarProperty Name="Create_Spell" ColumnName="Create Spell" />
+          <ScalarProperty Name="Desc_1" ColumnName="Desc 1" />
+          <ScalarProperty Name="Desc_2" ColumnName="Desc 2" />
+          <ScalarProperty Name="Desc_3" ColumnName="Desc 3" />
+          <ScalarProperty Name="Desc_4" ColumnName="Desc 4" />
+          <ScalarProperty Name="Attack_Type_0" ColumnName="Attack Type 0" />
+          <ScalarProperty Name="Attack_Accu_Spell_0" ColumnName="Attack Accu/Spell 0" />
+          <ScalarProperty Name="Attack___0" ColumnName="Attack % 0" />
+          <ScalarProperty Name="Attack_Min_Hit_Cast___0" ColumnName="Attack Min Hit/Cast % 0" />
+          <ScalarProperty Name="Attack_Max_Hit_Cast_LVL_0" ColumnName="Attack Max Hit/Cast LVL 0" />
+          <ScalarProperty Name="Attack_Hit_Msg_0" ColumnName="Attack Hit Msg 0" />
+          <ScalarProperty Name="Attack_Dodge_Msg_0" ColumnName="Attack Dodge Msg 0" />
+          <ScalarProperty Name="Attack_Miss_Msg_0" ColumnName="Attack Miss Msg 0" />
+          <ScalarProperty Name="Attack_Energy_0" ColumnName="Attack Energy 0" />
+          <ScalarProperty Name="Attack_Hit_Spell_0" ColumnName="Attack Hit Spell 0" />
+          <ScalarProperty Name="Spell_Number_0" ColumnName="Spell Number 0" />
+          <ScalarProperty Name="Spell_Cast___0" ColumnName="Spell Cast % 0" />
+          <ScalarProperty Name="Spell_Cast_LVL_0" ColumnName="Spell Cast LVL 0" />
+          <ScalarProperty Name="Attack_Type_1" ColumnName="Attack Type 1" />
+          <ScalarProperty Name="Attack_Accu_Spell_1" ColumnName="Attack Accu/Spell 1" />
+          <ScalarProperty Name="Attack___1" ColumnName="Attack % 1" />
+          <ScalarProperty Name="Attack_Min_Hit_Cast___1" ColumnName="Attack Min Hit/Cast % 1" />
+          <ScalarProperty Name="Attack_Max_Hit_Cast_LVL_1" ColumnName="Attack Max Hit/Cast LVL 1" />
+          <ScalarProperty Name="Attack_Hit_Msg_1" ColumnName="Attack Hit Msg 1" />
+          <ScalarProperty Name="Attack_Dodge_Msg_1" ColumnName="Attack Dodge Msg 1" />
+          <ScalarProperty Name="Attack_Miss_Msg_1" ColumnName="Attack Miss Msg 1" />
+          <ScalarProperty Name="Attack_Energy_1" ColumnName="Attack Energy 1" />
+          <ScalarProperty Name="Attack_Hit_Spell_1" ColumnName="Attack Hit Spell 1" />
+          <ScalarProperty Name="Spell_Number_1" ColumnName="Spell Number 1" />
+          <ScalarProperty Name="Spell_Cast___1" ColumnName="Spell Cast % 1" />
+          <ScalarProperty Name="Spell_Cast_LVL_1" ColumnName="Spell Cast LVL 1" />
+          <ScalarProperty Name="Attack_Type_2" ColumnName="Attack Type 2" />
+          <ScalarProperty Name="Attack_Accu_Spell_2" ColumnName="Attack Accu/Spell 2" />
+          <ScalarProperty Name="Attack___2" ColumnName="Attack % 2" />
+          <ScalarProperty Name="Attack_Min_Hit_Cast___2" ColumnName="Attack Min Hit/Cast % 2" />
+          <ScalarProperty Name="Attack_Max_Hit_Cast_LVL_2" ColumnName="Attack Max Hit/Cast LVL 2" />
+          <ScalarProperty Name="Attack_Hit_Msg_2" ColumnName="Attack Hit Msg 2" />
+          <ScalarProperty Name="Attack_Dodge_Msg_2" ColumnName="Attack Dodge Msg 2" />
+          <ScalarProperty Name="Attack_Miss_Msg_2" ColumnName="Attack Miss Msg 2" />
+          <ScalarProperty Name="Attack_Energy_2" ColumnName="Attack Energy 2" />
+          <ScalarProperty Name="Attack_Hit_Spell_2" ColumnName="Attack Hit Spell 2" />
+          <ScalarProperty Name="Spell_Number_2" ColumnName="Spell Number 2" />
+          <ScalarProperty Name="Spell_Cast___2" ColumnName="Spell Cast % 2" />
+          <ScalarProperty Name="Spell_Cast_LVL_2" ColumnName="Spell Cast LVL 2" />
+          <ScalarProperty Name="Attack_Type_3" ColumnName="Attack Type 3" />
+          <ScalarProperty Name="Attack_Accu_Spell_3" ColumnName="Attack Accu/Spell 3" />
+          <ScalarProperty Name="Attack___3" ColumnName="Attack % 3" />
+          <ScalarProperty Name="Attack_Min_Hit_Cast___3" ColumnName="Attack Min Hit/Cast % 3" />
+          <ScalarProperty Name="Attack_Max_Hit_Cast_LVL_3" ColumnName="Attack Max Hit/Cast LVL 3" />
+          <ScalarProperty Name="Attack_Hit_Msg_3" ColumnName="Attack Hit Msg 3" />
+          <ScalarProperty Name="Attack_Dodge_Msg_3" ColumnName="Attack Dodge Msg 3" />
+          <ScalarProperty Name="Attack_Miss_Msg_3" ColumnName="Attack Miss Msg 3" />
+          <ScalarProperty Name="Attack_Energy_3" ColumnName="Attack Energy 3" />
+          <ScalarProperty Name="Attack_Hit_Spell_3" ColumnName="Attack Hit Spell 3" />
+          <ScalarProperty Name="Spell_Number_3" ColumnName="Spell Number 3" />
+          <ScalarProperty Name="Spell_Cast___3" ColumnName="Spell Cast % 3" />
+          <ScalarProperty Name="Spell_Cast_LVL_3" ColumnName="Spell Cast LVL 3" />
+          <ScalarProperty Name="Attack_Type_4" ColumnName="Attack Type 4" />
+          <ScalarProperty Name="Attack_Accu_Spell_4" ColumnName="Attack Accu/Spell 4" />
+          <ScalarProperty Name="Attack___4" ColumnName="Attack % 4" />
+          <ScalarProperty Name="Attack_Min_Hit_Cast___4" ColumnName="Attack Min Hit/Cast % 4" />
+          <ScalarProperty Name="Attack_Max_Hit_Cast_LVL_4" ColumnName="Attack Max Hit/Cast LVL 4" />
+          <ScalarProperty Name="Attack_Hit_Msg_4" ColumnName="Attack Hit Msg 4" />
+          <ScalarProperty Name="Attack_Dodge_Msg_4" ColumnName="Attack Dodge Msg 4" />
+          <ScalarProperty Name="Attack_Miss_Msg_4" ColumnName="Attack Miss Msg 4" />
+          <ScalarProperty Name="Attack_Energy_4" ColumnName="Attack Energy 4" />
+          <ScalarProperty Name="Attack_Hit_Spell_4" ColumnName="Attack Hit Spell 4" />
+          <ScalarProperty Name="Spell_Number_4" ColumnName="Spell Number 4" />
+          <ScalarProperty Name="Spell_Cast___4" ColumnName="Spell Cast % 4" />
+          <ScalarProperty Name="Spell_Cast_LVL_4" ColumnName="Spell Cast LVL 4" />
+          <ScalarProperty Name="Item_Number_0" ColumnName="Item Number 0" />
+          <ScalarProperty Name="Item_Uses_0" ColumnName="Item Uses 0" />
+          <ScalarProperty Name="Item_Drop___0" ColumnName="Item Drop % 0" />
+          <ScalarProperty Name="Item_Number_1" ColumnName="Item Number 1" />
+          <ScalarProperty Name="Item_Uses_1" ColumnName="Item Uses 1" />
+          <ScalarProperty Name="Item_Drop___1" ColumnName="Item Drop % 1" />
+          <ScalarProperty Name="Item_Number_2" ColumnName="Item Number 2" />
+          <ScalarProperty Name="Item_Uses_2" ColumnName="Item Uses 2" />
+          <ScalarProperty Name="Item_Drop___2" ColumnName="Item Drop % 2" />
+          <ScalarProperty Name="Item_Number_3" ColumnName="Item Number 3" />
+          <ScalarProperty Name="Item_Uses_3" ColumnName="Item Uses 3" />
+          <ScalarProperty Name="Item_Drop___3" ColumnName="Item Drop % 3" />
+          <ScalarProperty Name="Item_Number_4" ColumnName="Item Number 4" />
+          <ScalarProperty Name="Item_Uses_4" ColumnName="Item Uses 4" />
+          <ScalarProperty Name="Item_Drop___4" ColumnName="Item Drop % 4" />
+          <ScalarProperty Name="Item_Number_5" ColumnName="Item Number 5" />
+          <ScalarProperty Name="Item_Uses_5" ColumnName="Item Uses 5" />
+          <ScalarProperty Name="Item_Drop___5" ColumnName="Item Drop % 5" />
+          <ScalarProperty Name="Item_Number_6" ColumnName="Item Number 6" />
+          <ScalarProperty Name="Item_Uses_6" ColumnName="Item Uses 6" />
+          <ScalarProperty Name="Item_Drop___6" ColumnName="Item Drop % 6" />
+          <ScalarProperty Name="Item_Number_7" ColumnName="Item Number 7" />
+          <ScalarProperty Name="Item_Uses_7" ColumnName="Item Uses 7" />
+          <ScalarProperty Name="Item_Drop___7" ColumnName="Item Drop % 7" />
+          <ScalarProperty Name="Item_Number_8" ColumnName="Item Number 8" />
+          <ScalarProperty Name="Item_Uses_8" ColumnName="Item Uses 8" />
+          <ScalarProperty Name="Item_Drop___8" ColumnName="Item Drop % 8" />
+          <ScalarProperty Name="Item_Number_9" ColumnName="Item Number 9" />
+          <ScalarProperty Name="Item_Uses_9" ColumnName="Item Uses 9" />
+          <ScalarProperty Name="Item_Drop___9" ColumnName="Item Drop % 9" />
+          <ScalarProperty Name="Ability_0" ColumnName="Ability 0" />
+          <ScalarProperty Name="Ability_Value_0" ColumnName="Ability Value 0" />
+          <ScalarProperty Name="Ability_1" ColumnName="Ability 1" />
+          <ScalarProperty Name="Ability_Value_1" ColumnName="Ability Value 1" />
+          <ScalarProperty Name="Ability_2" ColumnName="Ability 2" />
+          <ScalarProperty Name="Ability_Value_2" ColumnName="Ability Value 2" />
+          <ScalarProperty Name="Ability_3" ColumnName="Ability 3" />
+          <ScalarProperty Name="Ability_Value_3" ColumnName="Ability Value 3" />
+          <ScalarProperty Name="Ability_4" ColumnName="Ability 4" />
+          <ScalarProperty Name="Ability_Value_4" ColumnName="Ability Value 4" />
+          <ScalarProperty Name="Ability_5" ColumnName="Ability 5" />
+          <ScalarProperty Name="Ability_Value_5" ColumnName="Ability Value 5" />
+          <ScalarProperty Name="Ability_6" ColumnName="Ability 6" />
+          <ScalarProperty Name="Ability_Value_6" ColumnName="Ability Value 6" />
+          <ScalarProperty Name="Ability_7" ColumnName="Ability 7" />
+          <ScalarProperty Name="Ability_Value_7" ColumnName="Ability Value 7" />
+          <ScalarProperty Name="Ability_8" ColumnName="Ability 8" />
+          <ScalarProperty Name="Ability_Value_8" ColumnName="Ability Value 8" />
+          <ScalarProperty Name="Ability_9" ColumnName="Ability 9" />
+          <ScalarProperty Name="Ability_Value_9" ColumnName="Ability Value 9" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Races">
+      <EntityTypeMapping TypeName="MajorModelModel.Race">
+        <MappingFragment StoreEntitySet="Races">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Min_INT" ColumnName="Min INT" />
+          <ScalarProperty Name="Min_WIL" ColumnName="Min WIL" />
+          <ScalarProperty Name="Min_STR" ColumnName="Min STR" />
+          <ScalarProperty Name="Min_HEA" ColumnName="Min HEA" />
+          <ScalarProperty Name="Min_AGL" ColumnName="Min AGL" />
+          <ScalarProperty Name="Min_CHM" ColumnName="Min CHM" />
+          <ScalarProperty Name="Max_INT" ColumnName="Max INT" />
+          <ScalarProperty Name="Max_WIL" ColumnName="Max WIL" />
+          <ScalarProperty Name="Max_STR" ColumnName="Max STR" />
+          <ScalarProperty Name="Max_HEA" ColumnName="Max HEA" />
+          <ScalarProperty Name="Max_AGL" ColumnName="Max AGL" />
+          <ScalarProperty Name="Max_CHM" ColumnName="Max CHM" />
+          <ScalarProperty Name="HP_Bonus" ColumnName="HP Bonus" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="EXP__" ColumnName="EXP %" />
+          <ScalarProperty Name="Ability_0" ColumnName="Ability 0" />
+          <ScalarProperty Name="Ability_Value_0" ColumnName="Ability Value 0" />
+          <ScalarProperty Name="Ability_1" ColumnName="Ability 1" />
+          <ScalarProperty Name="Ability_Value_1" ColumnName="Ability Value 1" />
+          <ScalarProperty Name="Ability_2" ColumnName="Ability 2" />
+          <ScalarProperty Name="Ability_Value_2" ColumnName="Ability Value 2" />
+          <ScalarProperty Name="Ability_3" ColumnName="Ability 3" />
+          <ScalarProperty Name="Ability_Value_3" ColumnName="Ability Value 3" />
+          <ScalarProperty Name="Ability_4" ColumnName="Ability 4" />
+          <ScalarProperty Name="Ability_Value_4" ColumnName="Ability Value 4" />
+          <ScalarProperty Name="Ability_5" ColumnName="Ability 5" />
+          <ScalarProperty Name="Ability_Value_5" ColumnName="Ability Value 5" />
+          <ScalarProperty Name="Ability_6" ColumnName="Ability 6" />
+          <ScalarProperty Name="Ability_Value_6" ColumnName="Ability Value 6" />
+          <ScalarProperty Name="Ability_7" ColumnName="Ability 7" />
+          <ScalarProperty Name="Ability_Value_7" ColumnName="Ability Value 7" />
+          <ScalarProperty Name="Ability_8" ColumnName="Ability 8" />
+          <ScalarProperty Name="Ability_Value_8" ColumnName="Ability Value 8" />
+          <ScalarProperty Name="Ability_9" ColumnName="Ability 9" />
+          <ScalarProperty Name="Ability_Value_9" ColumnName="Ability Value 9" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="MajorModelModel.Room">
+        <MappingFragment StoreEntitySet="Rooms">
+          <ScalarProperty Name="Map_Number" ColumnName="Map Number" />
+          <ScalarProperty Name="Room_Number" ColumnName="Room Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Desc_0" ColumnName="Desc 0" />
+          <ScalarProperty Name="Desc_1" ColumnName="Desc 1" />
+          <ScalarProperty Name="Desc_2" ColumnName="Desc 2" />
+          <ScalarProperty Name="Desc_3" ColumnName="Desc 3" />
+          <ScalarProperty Name="Desc_4" ColumnName="Desc 4" />
+          <ScalarProperty Name="Desc_5" ColumnName="Desc 5" />
+          <ScalarProperty Name="Desc_6" ColumnName="Desc 6" />
+          <ScalarProperty Name="AnsiMap" ColumnName="AnsiMap" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Shop_Number" ColumnName="Shop Number" />
+          <ScalarProperty Name="Gang_House_Number" ColumnName="Gang House Number" />
+          <ScalarProperty Name="Mon_Type" ColumnName="Mon Type" />
+          <ScalarProperty Name="Min_Index" ColumnName="Min Index" />
+          <ScalarProperty Name="Max_Index" ColumnName="Max Index" />
+          <ScalarProperty Name="Max_Regen" ColumnName="Max Regen" />
+          <ScalarProperty Name="Max_Area" ColumnName="Max Area" />
+          <ScalarProperty Name="Control_Room" ColumnName="Control Room" />
+          <ScalarProperty Name="Light" ColumnName="Light" />
+          <ScalarProperty Name="Attributes" ColumnName="Attributes" />
+          <ScalarProperty Name="Death_Room" ColumnName="Death Room" />
+          <ScalarProperty Name="Exit_Room" ColumnName="Exit Room" />
+          <ScalarProperty Name="Command_Text" ColumnName="Command Text" />
+          <ScalarProperty Name="Delay" ColumnName="Delay" />
+          <ScalarProperty Name="Perm_NPC" ColumnName="Perm NPC" />
+          <ScalarProperty Name="Spell" ColumnName="Spell" />
+          <ScalarProperty Name="Exit_0" ColumnName="Exit 0" />
+          <ScalarProperty Name="Type_0" ColumnName="Type 0" />
+          <ScalarProperty Name="Para1_0" ColumnName="Para1 0" />
+          <ScalarProperty Name="Para2_0" ColumnName="Para2 0" />
+          <ScalarProperty Name="Para3_0" ColumnName="Para3 0" />
+          <ScalarProperty Name="Para4_0" ColumnName="Para4 0" />
+          <ScalarProperty Name="Exit_1" ColumnName="Exit 1" />
+          <ScalarProperty Name="Type_1" ColumnName="Type 1" />
+          <ScalarProperty Name="Para1_1" ColumnName="Para1 1" />
+          <ScalarProperty Name="Para2_1" ColumnName="Para2 1" />
+          <ScalarProperty Name="Para3_1" ColumnName="Para3 1" />
+          <ScalarProperty Name="Para4_1" ColumnName="Para4 1" />
+          <ScalarProperty Name="Exit_2" ColumnName="Exit 2" />
+          <ScalarProperty Name="Type_2" ColumnName="Type 2" />
+          <ScalarProperty Name="Para1_2" ColumnName="Para1 2" />
+          <ScalarProperty Name="Para2_2" ColumnName="Para2 2" />
+          <ScalarProperty Name="Para3_2" ColumnName="Para3 2" />
+          <ScalarProperty Name="Para4_2" ColumnName="Para4 2" />
+          <ScalarProperty Name="Exit_3" ColumnName="Exit 3" />
+          <ScalarProperty Name="Type_3" ColumnName="Type 3" />
+          <ScalarProperty Name="Para1_3" ColumnName="Para1 3" />
+          <ScalarProperty Name="Para2_3" ColumnName="Para2 3" />
+          <ScalarProperty Name="Para3_3" ColumnName="Para3 3" />
+          <ScalarProperty Name="Para4_3" ColumnName="Para4 3" />
+          <ScalarProperty Name="Exit_4" ColumnName="Exit 4" />
+          <ScalarProperty Name="Type_4" ColumnName="Type 4" />
+          <ScalarProperty Name="Para1_4" ColumnName="Para1 4" />
+          <ScalarProperty Name="Para2_4" ColumnName="Para2 4" />
+          <ScalarProperty Name="Para3_4" ColumnName="Para3 4" />
+          <ScalarProperty Name="Para4_4" ColumnName="Para4 4" />
+          <ScalarProperty Name="Exit_5" ColumnName="Exit 5" />
+          <ScalarProperty Name="Type_5" ColumnName="Type 5" />
+          <ScalarProperty Name="Para1_5" ColumnName="Para1 5" />
+          <ScalarProperty Name="Para2_5" ColumnName="Para2 5" />
+          <ScalarProperty Name="Para3_5" ColumnName="Para3 5" />
+          <ScalarProperty Name="Para4_5" ColumnName="Para4 5" />
+          <ScalarProperty Name="Exit_6" ColumnName="Exit 6" />
+          <ScalarProperty Name="Type_6" ColumnName="Type 6" />
+          <ScalarProperty Name="Para1_6" ColumnName="Para1 6" />
+          <ScalarProperty Name="Para2_6" ColumnName="Para2 6" />
+          <ScalarProperty Name="Para3_6" ColumnName="Para3 6" />
+          <ScalarProperty Name="Para4_6" ColumnName="Para4 6" />
+          <ScalarProperty Name="Exit_7" ColumnName="Exit 7" />
+          <ScalarProperty Name="Type_7" ColumnName="Type 7" />
+          <ScalarProperty Name="Para1_7" ColumnName="Para1 7" />
+          <ScalarProperty Name="Para2_7" ColumnName="Para2 7" />
+          <ScalarProperty Name="Para3_7" ColumnName="Para3 7" />
+          <ScalarProperty Name="Para4_7" ColumnName="Para4 7" />
+          <ScalarProperty Name="Exit_8" ColumnName="Exit 8" />
+          <ScalarProperty Name="Type_8" ColumnName="Type 8" />
+          <ScalarProperty Name="Para1_8" ColumnName="Para1 8" />
+          <ScalarProperty Name="Para2_8" ColumnName="Para2 8" />
+          <ScalarProperty Name="Para3_8" ColumnName="Para3 8" />
+          <ScalarProperty Name="Para4_8" ColumnName="Para4 8" />
+          <ScalarProperty Name="Exit_9" ColumnName="Exit 9" />
+          <ScalarProperty Name="Type_9" ColumnName="Type 9" />
+          <ScalarProperty Name="Para1_9" ColumnName="Para1 9" />
+          <ScalarProperty Name="Para2_9" ColumnName="Para2 9" />
+          <ScalarProperty Name="Para3_9" ColumnName="Para3 9" />
+          <ScalarProperty Name="Para4_9" ColumnName="Para4 9" />
+          <ScalarProperty Name="Placed_Item_0" ColumnName="Placed Item 0" />
+          <ScalarProperty Name="Placed_Item_1" ColumnName="Placed Item 1" />
+          <ScalarProperty Name="Placed_Item_2" ColumnName="Placed Item 2" />
+          <ScalarProperty Name="Placed_Item_3" ColumnName="Placed Item 3" />
+          <ScalarProperty Name="Placed_Item_4" ColumnName="Placed Item 4" />
+          <ScalarProperty Name="Placed_Item_5" ColumnName="Placed Item 5" />
+          <ScalarProperty Name="Placed_Item_6" ColumnName="Placed Item 6" />
+          <ScalarProperty Name="Placed_Item_7" ColumnName="Placed Item 7" />
+          <ScalarProperty Name="Placed_Item_8" ColumnName="Placed Item 8" />
+          <ScalarProperty Name="Placed_Item_9" ColumnName="Placed Item 9" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="Z" ColumnName="Z" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="MajorModelModel.Setting">
+        <MappingFragment StoreEntitySet="Settings">
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shops">
+      <EntityTypeMapping TypeName="MajorModelModel.Shop">
+        <MappingFragment StoreEntitySet="Shops">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Desc_A" ColumnName="Desc A" />
+          <ScalarProperty Name="Desc_B" ColumnName="Desc B" />
+          <ScalarProperty Name="Desc_C" ColumnName="Desc C" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Min_Lvl" ColumnName="Min Lvl" />
+          <ScalarProperty Name="Max_Lvl" ColumnName="Max Lvl" />
+          <ScalarProperty Name="MarkUp" ColumnName="MarkUp" />
+          <ScalarProperty Name="Class_Limit" ColumnName="Class Limit" />
+          <ScalarProperty Name="Item_0" ColumnName="Item 0" />
+          <ScalarProperty Name="Max_0" ColumnName="Max 0" />
+          <ScalarProperty Name="Normal_0" ColumnName="Normal 0" />
+          <ScalarProperty Name="Regen_Time_0" ColumnName="Regen Time 0" />
+          <ScalarProperty Name="Regen_Number0" ColumnName="Regen Number0" />
+          <ScalarProperty Name="Regen__0" ColumnName="Regen %0" />
+          <ScalarProperty Name="Item_1" ColumnName="Item 1" />
+          <ScalarProperty Name="Max_1" ColumnName="Max 1" />
+          <ScalarProperty Name="Normal_1" ColumnName="Normal 1" />
+          <ScalarProperty Name="Regen_Time_1" ColumnName="Regen Time 1" />
+          <ScalarProperty Name="Regen_Number1" ColumnName="Regen Number1" />
+          <ScalarProperty Name="Regen__1" ColumnName="Regen %1" />
+          <ScalarProperty Name="Item_2" ColumnName="Item 2" />
+          <ScalarProperty Name="Max_2" ColumnName="Max 2" />
+          <ScalarProperty Name="Normal_2" ColumnName="Normal 2" />
+          <ScalarProperty Name="Regen_Time_2" ColumnName="Regen Time 2" />
+          <ScalarProperty Name="Regen_Number2" ColumnName="Regen Number2" />
+          <ScalarProperty Name="Regen__2" ColumnName="Regen %2" />
+          <ScalarProperty Name="Item_3" ColumnName="Item 3" />
+          <ScalarProperty Name="Max_3" ColumnName="Max 3" />
+          <ScalarProperty Name="Normal_3" ColumnName="Normal 3" />
+          <ScalarProperty Name="Regen_Time_3" ColumnName="Regen Time 3" />
+          <ScalarProperty Name="Regen_Number3" ColumnName="Regen Number3" />
+          <ScalarProperty Name="Regen__3" ColumnName="Regen %3" />
+          <ScalarProperty Name="Item_4" ColumnName="Item 4" />
+          <ScalarProperty Name="Max_4" ColumnName="Max 4" />
+          <ScalarProperty Name="Normal_4" ColumnName="Normal 4" />
+          <ScalarProperty Name="Regen_Time_4" ColumnName="Regen Time 4" />
+          <ScalarProperty Name="Regen_Number4" ColumnName="Regen Number4" />
+          <ScalarProperty Name="Regen__4" ColumnName="Regen %4" />
+          <ScalarProperty Name="Item_5" ColumnName="Item 5" />
+          <ScalarProperty Name="Max_5" ColumnName="Max 5" />
+          <ScalarProperty Name="Normal_5" ColumnName="Normal 5" />
+          <ScalarProperty Name="Regen_Time_5" ColumnName="Regen Time 5" />
+          <ScalarProperty Name="Regen_Number5" ColumnName="Regen Number5" />
+          <ScalarProperty Name="Regen__5" ColumnName="Regen %5" />
+          <ScalarProperty Name="Item_6" ColumnName="Item 6" />
+          <ScalarProperty Name="Max_6" ColumnName="Max 6" />
+          <ScalarProperty Name="Normal_6" ColumnName="Normal 6" />
+          <ScalarProperty Name="Regen_Time_6" ColumnName="Regen Time 6" />
+          <ScalarProperty Name="Regen_Number6" ColumnName="Regen Number6" />
+          <ScalarProperty Name="Regen__6" ColumnName="Regen %6" />
+          <ScalarProperty Name="Item_7" ColumnName="Item 7" />
+          <ScalarProperty Name="Max_7" ColumnName="Max 7" />
+          <ScalarProperty Name="Normal_7" ColumnName="Normal 7" />
+          <ScalarProperty Name="Regen_Time_7" ColumnName="Regen Time 7" />
+          <ScalarProperty Name="Regen_Number7" ColumnName="Regen Number7" />
+          <ScalarProperty Name="Regen__7" ColumnName="Regen %7" />
+          <ScalarProperty Name="Item_8" ColumnName="Item 8" />
+          <ScalarProperty Name="Max_8" ColumnName="Max 8" />
+          <ScalarProperty Name="Normal_8" ColumnName="Normal 8" />
+          <ScalarProperty Name="Regen_Time_8" ColumnName="Regen Time 8" />
+          <ScalarProperty Name="Regen_Number8" ColumnName="Regen Number8" />
+          <ScalarProperty Name="Regen__8" ColumnName="Regen %8" />
+          <ScalarProperty Name="Item_9" ColumnName="Item 9" />
+          <ScalarProperty Name="Max_9" ColumnName="Max 9" />
+          <ScalarProperty Name="Normal_9" ColumnName="Normal 9" />
+          <ScalarProperty Name="Regen_Time_9" ColumnName="Regen Time 9" />
+          <ScalarProperty Name="Regen_Number9" ColumnName="Regen Number9" />
+          <ScalarProperty Name="Regen__9" ColumnName="Regen %9" />
+          <ScalarProperty Name="Item_10" ColumnName="Item 10" />
+          <ScalarProperty Name="Max_10" ColumnName="Max 10" />
+          <ScalarProperty Name="Normal_10" ColumnName="Normal 10" />
+          <ScalarProperty Name="Regen_Time_10" ColumnName="Regen Time 10" />
+          <ScalarProperty Name="Regen_Number10" ColumnName="Regen Number10" />
+          <ScalarProperty Name="Regen__10" ColumnName="Regen %10" />
+          <ScalarProperty Name="Item_11" ColumnName="Item 11" />
+          <ScalarProperty Name="Max_11" ColumnName="Max 11" />
+          <ScalarProperty Name="Normal_11" ColumnName="Normal 11" />
+          <ScalarProperty Name="Regen_Time_11" ColumnName="Regen Time 11" />
+          <ScalarProperty Name="Regen_Number11" ColumnName="Regen Number11" />
+          <ScalarProperty Name="Regen__11" ColumnName="Regen %11" />
+          <ScalarProperty Name="Item_12" ColumnName="Item 12" />
+          <ScalarProperty Name="Max_12" ColumnName="Max 12" />
+          <ScalarProperty Name="Normal_12" ColumnName="Normal 12" />
+          <ScalarProperty Name="Regen_Time_12" ColumnName="Regen Time 12" />
+          <ScalarProperty Name="Regen_Number12" ColumnName="Regen Number12" />
+          <ScalarProperty Name="Regen__12" ColumnName="Regen %12" />
+          <ScalarProperty Name="Item_13" ColumnName="Item 13" />
+          <ScalarProperty Name="Max_13" ColumnName="Max 13" />
+          <ScalarProperty Name="Normal_13" ColumnName="Normal 13" />
+          <ScalarProperty Name="Regen_Time_13" ColumnName="Regen Time 13" />
+          <ScalarProperty Name="Regen_Number13" ColumnName="Regen Number13" />
+          <ScalarProperty Name="Regen__13" ColumnName="Regen %13" />
+          <ScalarProperty Name="Item_14" ColumnName="Item 14" />
+          <ScalarProperty Name="Max_14" ColumnName="Max 14" />
+          <ScalarProperty Name="Normal_14" ColumnName="Normal 14" />
+          <ScalarProperty Name="Regen_Time_14" ColumnName="Regen Time 14" />
+          <ScalarProperty Name="Regen_Number14" ColumnName="Regen Number14" />
+          <ScalarProperty Name="Regen__14" ColumnName="Regen %14" />
+          <ScalarProperty Name="Item_15" ColumnName="Item 15" />
+          <ScalarProperty Name="Max_15" ColumnName="Max 15" />
+          <ScalarProperty Name="Normal_15" ColumnName="Normal 15" />
+          <ScalarProperty Name="Regen_Time_15" ColumnName="Regen Time 15" />
+          <ScalarProperty Name="Regen_Number15" ColumnName="Regen Number15" />
+          <ScalarProperty Name="Regen__15" ColumnName="Regen %15" />
+          <ScalarProperty Name="Item_16" ColumnName="Item 16" />
+          <ScalarProperty Name="Max_16" ColumnName="Max 16" />
+          <ScalarProperty Name="Normal_16" ColumnName="Normal 16" />
+          <ScalarProperty Name="Regen_Time_16" ColumnName="Regen Time 16" />
+          <ScalarProperty Name="Regen_Number16" ColumnName="Regen Number16" />
+          <ScalarProperty Name="Regen__16" ColumnName="Regen %16" />
+          <ScalarProperty Name="Item_17" ColumnName="Item 17" />
+          <ScalarProperty Name="Max_17" ColumnName="Max 17" />
+          <ScalarProperty Name="Normal_17" ColumnName="Normal 17" />
+          <ScalarProperty Name="Regen_Time_17" ColumnName="Regen Time 17" />
+          <ScalarProperty Name="Regen_Number17" ColumnName="Regen Number17" />
+          <ScalarProperty Name="Regen__17" ColumnName="Regen %17" />
+          <ScalarProperty Name="Item_18" ColumnName="Item 18" />
+          <ScalarProperty Name="Max_18" ColumnName="Max 18" />
+          <ScalarProperty Name="Normal_18" ColumnName="Normal 18" />
+          <ScalarProperty Name="Regen_Time_18" ColumnName="Regen Time 18" />
+          <ScalarProperty Name="Regen_Number18" ColumnName="Regen Number18" />
+          <ScalarProperty Name="Regen__18" ColumnName="Regen %18" />
+          <ScalarProperty Name="Item_19" ColumnName="Item 19" />
+          <ScalarProperty Name="Max_19" ColumnName="Max 19" />
+          <ScalarProperty Name="Normal_19" ColumnName="Normal 19" />
+          <ScalarProperty Name="Regen_Time_19" ColumnName="Regen Time 19" />
+          <ScalarProperty Name="Regen_Number19" ColumnName="Regen Number19" />
+          <ScalarProperty Name="Regen__19" ColumnName="Regen %19" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Spells">
+      <EntityTypeMapping TypeName="MajorModelModel.Spell">
+        <MappingFragment StoreEntitySet="Spells">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Short_Name" ColumnName="Short Name" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Desc_1" ColumnName="Desc 1" />
+          <ScalarProperty Name="Desc_2" ColumnName="Desc 2" />
+          <ScalarProperty Name="Cast_MSG_A" ColumnName="Cast MSG A" />
+          <ScalarProperty Name="Cast_MSG_B" ColumnName="Cast MSG B" />
+          <ScalarProperty Name="MSG_Style" ColumnName="MSG Style" />
+          <ScalarProperty Name="Energy" ColumnName="Energy" />
+          <ScalarProperty Name="Mana" ColumnName="Mana" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Spell_Type" ColumnName="Spell Type" />
+          <ScalarProperty Name="Type_of_Resists" ColumnName="Type of Resists" />
+          <ScalarProperty Name="Difficulty" ColumnName="Difficulty" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Attack_Type" ColumnName="Attack Type" />
+          <ScalarProperty Name="Resist_Ability" ColumnName="Resist Ability" />
+          <ScalarProperty Name="Magery_A" ColumnName="Magery A" />
+          <ScalarProperty Name="Magery_B" ColumnName="Magery B" />
+          <ScalarProperty Name="Level_Cap" ColumnName="Level Cap" />
+          <ScalarProperty Name="LVLS_Max_Increase" ColumnName="LVLS Max Increase" />
+          <ScalarProperty Name="Max_Increase" ColumnName="Max Increase" />
+          <ScalarProperty Name="LVLS_Min_Increase" ColumnName="LVLS Min Increase" />
+          <ScalarProperty Name="Min_Increase" ColumnName="Min Increase" />
+          <ScalarProperty Name="LVLS_Dur_Increase" ColumnName="LVLS Dur Increase" />
+          <ScalarProperty Name="Dur_Increase" ColumnName="Dur Increase" />
+          <ScalarProperty Name="UNDEFINED01" ColumnName="UNDEFINED01" />
+          <ScalarProperty Name="UNDEFINED02" ColumnName="UNDEFINED02" />
+          <ScalarProperty Name="Ability_0" ColumnName="Ability 0" />
+          <ScalarProperty Name="Ability_Value_0" ColumnName="Ability Value 0" />
+          <ScalarProperty Name="Ability_1" ColumnName="Ability 1" />
+          <ScalarProperty Name="Ability_Value_1" ColumnName="Ability Value 1" />
+          <ScalarProperty Name="Ability_2" ColumnName="Ability 2" />
+          <ScalarProperty Name="Ability_Value_2" ColumnName="Ability Value 2" />
+          <ScalarProperty Name="Ability_3" ColumnName="Ability 3" />
+          <ScalarProperty Name="Ability_Value_3" ColumnName="Ability Value 3" />
+          <ScalarProperty Name="Ability_4" ColumnName="Ability 4" />
+          <ScalarProperty Name="Ability_Value_4" ColumnName="Ability Value 4" />
+          <ScalarProperty Name="Ability_5" ColumnName="Ability 5" />
+          <ScalarProperty Name="Ability_Value_5" ColumnName="Ability Value 5" />
+          <ScalarProperty Name="Ability_6" ColumnName="Ability 6" />
+          <ScalarProperty Name="Ability_Value_6" ColumnName="Ability Value 6" />
+          <ScalarProperty Name="Ability_7" ColumnName="Ability 7" />
+          <ScalarProperty Name="Ability_Value_7" ColumnName="Ability Value 7" />
+          <ScalarProperty Name="Ability_8" ColumnName="Ability 8" />
+          <ScalarProperty Name="Ability_Value_8" ColumnName="Ability Value 8" />
+          <ScalarProperty Name="Ability_9" ColumnName="Ability 9" />
+          <ScalarProperty Name="Ability_Value_9" ColumnName="Ability Value 9" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
+</edmx:Mappings>
+</edmx:Runtime>
+<edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+<Connection><DesignerInfoPropertySet><DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" /></DesignerInfoPropertySet></Connection>
+<edmx:Options><DesignerInfoPropertySet><DesignerProperty Name="ValidateOnBuild" Value="True" /><DesignerProperty Name="EnablePluralization" Value="True" /><DesignerProperty Name="IncludeForeignKeysInModel" Value="True" /><DesignerProperty Name="CodeGenerationStrategy" Value="Default" /></DesignerInfoPropertySet></edmx:Options>
+<edmx:Diagrams >
+      <Diagram Name="MajorModel">
+        <EntityTypeShape EntityType="MajorModelModel.Class" Width="1.5" PointX="0.75" PointY="0.75" Height="6.9801236979166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="MajorModelModel.Item" Width="1.5" PointX="2.75" PointY="0.75" Height="21.787333984375003" IsExpanded="true" />
+        <EntityTypeShape EntityType="MajorModelModel.Message" Width="1.5" PointX="4.75" PointY="0.75" Height="1.7879850260416665" IsExpanded="true" />
+        <EntityTypeShape EntityType="MajorModelModel.Monster" Width="1.5" PointX="4.75" PointY="3.75" Height="31.017802734375003" IsExpanded="true" />
+        <EntityTypeShape EntityType="MajorModelModel.Race" Width="1.5" PointX="6.75" PointY="0.75" Height="8.1339322916666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MajorModelModel.Room" Width="1.5" PointX="8.75" PointY="0.75" Height="20.441223958333339" IsExpanded="true" />
+        <EntityTypeShape EntityType="MajorModelModel.Setting" Width="1.5" PointX="10.75" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="MajorModelModel.Shop" Width="1.5" PointX="10.75" PointY="3.75" Height="26.017965494791667" IsExpanded="true" />
+        <EntityTypeShape EntityType="MajorModelModel.Spell" Width="1.5" PointX="12.75" PointY="0.75" Height="10.826152343750003" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+</edmx:Designer></edmx:Edmx>

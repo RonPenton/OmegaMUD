@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E5A0912-7AE5-4A3E-9F37-4E36550DCDB8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OmegaMUD</RootNamespace>
+    <AssemblyName>OmegaMUD</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Desktop\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Commands\BarrierMovementOutputCommand.cs" />
+    <Compile Include="Commands\MovementOutputCommand.cs" />
+    <Compile Include="Commands\OutputCommand.cs" />
+    <Compile Include="Commands\Pathfinder.cs" />
+    <Compile Include="ConsoleControl.xaml.cs">
+      <DependentUpon>ConsoleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataStructures\Attributes.cs" />
+    <Compile Include="DataStructures\Builtin.cs" />
+    <Compile Include="DataStructures\CircularQueue.cs" />
+    <Compile Include="DataStructures\Collections.cs" />
+    <Compile Include="DataStructures\Comparer.cs" />
+    <Compile Include="DataStructures\Delegates.cs" />
+    <Compile Include="DataStructures\Dictionaries.cs" />
+    <Compile Include="DataStructures\Enums.cs" />
+    <Compile Include="DataStructures\Events.cs" />
+    <Compile Include="DataStructures\Exceptions.cs" />
+    <Compile Include="DataStructures\Formatting.cs" />
+    <Compile Include="DataStructures\HashDictionary.cs" />
+    <Compile Include="DataStructures\Hashers.cs" />
+    <Compile Include="DataStructures\HashTable.cs" />
+    <Compile Include="DataStructures\Interfaces.cs" />
+    <Compile Include="DataStructures\IntervalHeap.cs" />
+    <Compile Include="DataStructures\MappedEnumerators.cs" />
+    <Compile Include="DataStructures\RedBlackTreeDictionary.cs" />
+    <Compile Include="DataStructures\RedBlackTreeSet.cs" />
+    <Compile Include="DataStructures\SortedArray.cs" />
+    <Compile Include="DataStructures\Sorting.cs" />
+    <Compile Include="Data\Direction.cs" />
+    <Compile Include="Exits\ClassExitData.cs" />
+    <Compile Include="Exits\DoorExitData.cs" />
+    <Compile Include="Exits\ExitData.cs" />
+    <Compile Include="Data\IItemContainer.cs" />
+    <Compile Include="Data\Model.cs" />
+    <Compile Include="Data\RoomNumber.cs" />
+    <Compile Include="Data\SeenRoom.cs" />
+    <Compile Include="Data\Settings.cs" />
+    <Compile Include="Data\Message.cs" />
+    <Compile Include="Data\Wallet.cs" />
+    <Compile Include="Exits\GateExitData.cs" />
+    <Compile Include="Exits\HiddenExitData.cs" />
+    <Compile Include="Exits\ItemExitData.cs" />
+    <Compile Include="Exits\KeyExitData.cs" />
+    <Compile Include="Exits\LevelExitData.cs" />
+    <Compile Include="Exits\MapChangeExitData.cs" />
+    <Compile Include="Exits\RaceExitData.cs" />
+    <Compile Include="Exits\RemoteActionExitData.cs" />
+    <Compile Include="Exits\TextExitData.cs" />
+    <Compile Include="Exits\TollExitData.cs" />
+    <Compile Include="Exits\TrapExitData.cs" />
+    <Compile Include="MainWindow.OutputStateMachine.cs" />
+    <Compile Include="Data\Commands.cs" />
+    <Compile Include="MajorModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MajorModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="OmegaMUD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OmegaMUD.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Parsing\ExperienceParseState.cs" />
+    <Compile Include="Parsing\InventoryParseState.cs" />
+    <Compile Include="Parsing\LineParser.cs" />
+    <Compile Include="Parsing\ParseState.cs" />
+    <Compile Include="Data\Room.cs" />
+    <Compile Include="MapControl.xaml.cs">
+      <DependentUpon>MapControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MudPalette.cs" />
+    <Compile Include="MudParagraph.cs" />
+    <Compile Include="Parsing\RoomParseState.cs" />
+    <Compile Include="Parsing\SequenceParseState.cs" />
+    <Compile Include="Parsing\StatParseState.cs" />
+    <Compile Include="Parsing\TokenSequenceState.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerInterfaceControl.xaml.cs">
+      <DependentUpon>PlayerInterfaceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RoomControl.xaml.cs">
+      <DependentUpon>RoomControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telnet\ANSIColor.cs" />
+    <Compile Include="Telnet\ANSIParser.cs" />
+    <Compile Include="Telnet\AsciiDecoder.cs" />
+    <Compile Include="Telnet\MUDServerConnection.cs" />
+    <Compile Include="Telnet\MUDToken.cs" />
+    <Compile Include="Telnet\TelnetParser.cs" />
+    <Compile Include="Utilities.cs" />
+    <Page Include="ConsoleControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MapControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayerInterfaceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RoomControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.Config" />
+    <EntityDeploy Include="OmegaMUD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OmegaMUD.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="MajorModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MajorModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\DataSources\Entities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DialHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DeleteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditTableHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PlayHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PauseHS.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

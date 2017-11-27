@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="OmegaMUD.PlayerInterfaceControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OmegaMUD"
+             mc:Ignorable="d" Loaded="UserControl_Loaded"
+             d:DesignHeight="700" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>      <!-- Command Bar -->
+            <RowDefinition Height="200"/>       <!-- Chat Bar -->
+            <RowDefinition Height="Auto"/>      <!-- Splitter Bar -->
+            <RowDefinition Height="*"/>         <!-- Console Bar -->
+            <RowDefinition Height="Auto"/>      <!-- Splitter Bar -->
+            <RowDefinition Height="Auto" />     <!-- Status Bar -->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+
+        <ToolBarTray Width="200" HorizontalAlignment="Left" Name="toolBarTray" VerticalAlignment="Top">
+            <ToolBar Name="Main">
+                <RadioButton Name="ConnectButton" Click="ConnectButton_Click"  ToolTip="Connect">
+                    <Image Source="Resources\DialHS.png" />
+                </RadioButton>
+                <Button Name="OptionsButton" Click="OptionsButton_Click" ToolTip="Options">
+                    <Image Source="Resources\EditTableHS.png" />
+                </Button>
+                <Button Name="CloseButton" Click="CloseButton_Click" ToolTip="Close Current Tab">
+                    <Image Source="Resources\DeleteHS.png" />
+                </Button>
+            </ToolBar>
+            <ToolBar>
+                <RadioButton Name="MoveButton" Click="MoveButton_Click" ToolTip="Go To Location">
+                    <Image Source="Resources\PlayHS.png" />
+                </RadioButton>
+                <RadioButton Name="PauseButton" Click="PauseButton_Click" ToolTip="Stop Moving">
+                    <Image Source="Resources\PauseHS.png" />
+                </RadioButton>
+
+            </ToolBar>
+        </ToolBarTray>
+        <StatusBar Grid.Row="6" Grid.ColumnSpan="3" Height="23" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TextBlock x:Name="StatusText" Margin="5,0">Status</TextBlock>
+        </StatusBar>
+
+        <TabControl HorizontalAlignment="Stretch" Grid.Row="1" Name="ChatTabControl" VerticalAlignment="Stretch">
+            <TabItem Header="Debug" Name="DebugTab">
+                <local:ConsoleControl x:Name="DebugConsole" />
+            </TabItem>
+            <TabItem Header="All Conversations" Name="AllConversationsTab">
+                <local:ConsoleControl x:Name="AllConversationsConsole" />
+            </TabItem>
+        </TabControl>
+
+        <local:ConsoleControl Grid.Row="3" x:Name="OutputConsole" />
+
+        <!-- Minimap -->
+        <Grid Grid.Row="1" Grid.Column="2" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="145*" />
+            </Grid.RowDefinitions>
+            
+            <local:MapControl Width="200" Height="200" VerticalAlignment="Top" x:Name="MapControl" ></local:MapControl>
+            <ListBox Name="ItemList" Grid.Row="1" Height="200" SelectionMode="Single" >
+            </ListBox>
+            <ListBox Name="PeopleList" Grid.Row="2" Height="200" SelectionMode="Single" >
+            </ListBox>
+        </Grid>
+    </Grid>
+</UserControl>
